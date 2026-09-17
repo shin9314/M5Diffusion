@@ -2,51 +2,44 @@
 
 Fast local image generation for Apple Silicon, powered by MLX and Metal.
 
-Experimental alpha software optimized and currently benchmarked primarily on a MacBook Air M5 with 24GB Unified Memory.
+**Experimental alpha · SD1.5 · local Web UI + image upscaling.** Built and primarily tested on MacBook Air M5 / 24GB Unified Memory.
 
-**v0.1.0-alpha** runs SD1.5 locally on a Mac, with a browser UI and a separate uploaded-image upscaler. The release freezes the measured inference implementation; it is not a claim of universal performance across Apple Silicon.
+**[Download v0.1.0-alpha](https://github.com/shin9314/M5Diffusion/releases/tag/v0.1.0-alpha)** · [Installation](INSTALL.md) · [Launch facts & demo guide](docs/LAUNCH.md)
+
+Apple Silicon · macOS 26+ · 16GB+ memory. **Not Developer ID signed or notarized.** Model weights are separate; import a licensed SD1.5 checkpoint in the UI.
+
+## A measured snapshot
+
+SD1.5 · 512×512 · 20 steps · CFG 7 · seed 12345 · DPM++ 2M Karras, on M5 Air / 24GB.
+
+| Controlled MLX A/B | Warm diffusion median |
+|---|---:|
+| Native convolution | 7.486 s |
+| Selective im2col + MLX matmul | **6.025 s** |
+
+**1.23× median paired improvement** across three sessions; optimized total generation median **6.822 s**. Performance varies with thermal state, system load, model configuration and hardware. [Methodology, quality checks and limitations →](BENCHMARKS.md)
+
+## See it working
+
+<table><tr><td width="58%"><img src="docs/images/web-ui.png" alt="Actual M5Diffusion Web UI after local image generation" width="420"></td><td width="42%"><img src="docs/images/sd15-example.png" alt="Actual SD1.5 generated mountain lake landscape" width="320"></td></tr></table>
+
+Actual Web UI and SD1.5 output. The current UI is Japanese. No cloud inference; no model weights are bundled.
+
+## Try it
+
+1. Download the DMG from the [alpha Release](https://github.com/shin9314/M5Diffusion/releases/tag/v0.1.0-alpha).
+2. Open it, move **M5Diffusion.app** to Applications, and launch.
+3. Import a licensed SD1.5 `.safetensors` model, enter a prompt, and generate. Or select **画像を高画質化** to upscale an uploaded image.
+
+Save the result as PNG. Quit the app to stop the local server. The app includes a private runtime; no Homebrew, system-Python modification or sudo. See [INSTALL.md](INSTALL.md) for source setup, trusted-download/Gatekeeper guidance and troubleshooting.
 
 ## Features
 
-- Local SD1.5 text-to-image with prompt, negative prompt, seed, steps, CFG and image dimensions.
-- MLX FP16 UNet/CLIP, selective im2col + native MLX matmul, selectively padded fused self-attention, and compiled diffusion steps.
-- DPM++ 2M Karras sampling; FP32 latents, scheduler and VAE.
-- Local SD1.5 safetensors import and **limited standard LoRA support**. See [supported variants](docs/lora.md).
-- Real-ESRGAN uploaded-image enhancement, 2×/4× output, transparency preservation, before/after preview and PNG download.
-- Local processing; weights and generated images are not included in the source repository.
-
-## Requirements and installation
-
-Apple Silicon, macOS 26 or later, and at least 16 GB unified memory. **Only an M5 MacBook Air with 24 GB has been validated.** Other supported-architecture Macs remain unverified. Allow storage for the app, imported weights, conversion and outputs.
-
-Download the latest DMG from this repository’s Releases page. Open `M5Diffusion-v0.1.0-alpha.dmg`, drag **M5Diffusion.app** to Applications, then open it. The app includes a private Python runtime and dependencies: no Homebrew, system-Python modification or automatic sudo. The first launch prepares a writable application-data directory and opens the local Web UI. Follow its model setup to import a compatible SD1.5 `.safetensors` file. Upscaling has a separate explicit official-model download.
-
-This alpha is not Developer ID signed or notarized. See [INSTALL.md](INSTALL.md) for trusted-download/Gatekeeper guidance, startup checks, model setup, quitting and troubleshooting.
-
-## Web UI
-
-The browser opens at [127.0.0.1:7861](http://127.0.0.1:7861). Generate images using the labeled controls, then save the PNG. The upscaling mode accepts an existing image independently of text-to-image generation. Processing is serialized to avoid competing GPU jobs. Quit the app to stop its server. See [UI details](docs/UI.md) and [upscaler provenance](docs/upscale.md).
-
-## Measured performance and quality
-
-Controlled optimization comparison on the tested M5 Air: same SD1.5 checkpoint, 512×512, 20 steps, CFG 7, seed 12345, prompt and sampler. Three counterbalanced A/B sessions, 11 images per arm/session, first image excluded; at least 60 seconds between runs.
-
-| Pooled warm median, 30 images per arm | Native MLX convolution baseline | Accepted selective convolution implementation |
-|---|---:|---:|
-| Generation total | 8.309 s | **6.822 s** |
-| Diffusion | 7.486 s | **6.025 s** |
-| Seconds/step | 0.374 | **0.301** |
-| VAE | 0.795 s | **0.745 s** |
-
-Median of the three paired diffusion-median ratios: **1.230×**. Accepted 10-image session medians: **6.295 / 5.072 / 6.204 seconds**. This is an optimization comparison within MLX, **not** a controlled claim against PyTorch MPS or Draw Things. Historical MPS/MLX measurements are separate archival observations.
-
-Fixed-request quality checks against the preceding MLX implementation recorded minimum SSIM **0.99827862** and PSNR **48.08 dB**. Recorded swap growth was **0 MiB**. Floating-point rounding still differs; these checks are not a guarantee for every prompt or checkpoint. Performance depends on thermal state, background system load, model configuration, and hardware. Current benchmark results are experimental and should not be interpreted as universal performance guarantees. Full definitions, provenance and limitations: [BENCHMARKS.md](BENCHMARKS.md).
-
-## Example output
-
-![SD1.5 generated mountain lake landscape](docs/images/sd15-example.png)
-
-Example local SD1.5 output; not a quality guarantee for other prompts or models.
+- MLX-native SD1.5 generation with prompt, negative prompt, seed, steps, CFG and image dimensions.
+- Selective optimized UNet convolution, padded fused attention and compiled diffusion steps; DPM++ 2M Karras sampling.
+- Model import and [limited standard SD1.x LoRA support](docs/lora.md).
+- Separate Real-ESRGAN image upscaling: 2×/4×, transparency, before/after preview and PNG saving.
+- Local execution and a reproducible benchmark framework. [Web UI](docs/UI.md) · [Upscaler details](docs/upscale.md).
 
 ## Architecture
 
