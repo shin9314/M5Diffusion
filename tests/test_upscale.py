@@ -15,13 +15,20 @@ def test_limits(size,scale):
     with pytest.raises(ValueError):upscale.validate_image(Image.new('RGB',size),scale)
 
 
-def test_official_architecture_and_weights():
+def test_official_architecture():
     import torch
-    model=upscale.build_model();checkpoint=torch.load(upscale.MODEL_PATH,map_location='cpu',weights_only=True)
-    model.load_state_dict(checkpoint.get('params_ema',checkpoint.get('params')),strict=True)
+    model=upscale.build_model()
     assert sum(isinstance(m,torch.nn.Conv2d) for m in model.modules())==34
     assert model.receptive_radius==34
     assert len(model.body)==67
+
+
+@pytest.mark.skipif(not upscale.MODEL_PATH.is_file(), reason="optional official upscaler weights are not bundled")
+def test_official_weights_load_strictly():
+    import torch
+    model=upscale.build_model()
+    checkpoint=torch.load(upscale.MODEL_PATH,map_location="cpu",weights_only=True)
+    model.load_state_dict(checkpoint.get("params_ema",checkpoint.get("params")),strict=True)
 
 
 def test_tiled_matches_full_cpu():
