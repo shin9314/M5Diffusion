@@ -42,6 +42,12 @@ Median of the three paired diffusion-median ratios: **1.230×**. Accepted 10-ima
 
 Fixed-request quality checks against the preceding MLX implementation recorded minimum SSIM **0.99827862** and PSNR **48.08 dB**. Recorded swap growth was **0 MiB**. Floating-point rounding still differs; these checks are not a guarantee for every prompt or checkpoint. Performance depends on thermal state, background system load, model configuration, and hardware. Current benchmark results are experimental and should not be interpreted as universal performance guarantees. Full definitions, provenance and limitations: [BENCHMARKS.md](BENCHMARKS.md).
 
+## Example output
+
+![SD1.5 generated mountain lake landscape](docs/images/sd15-example.png)
+
+Example local SD1.5 output; not a quality guarantee for other prompts or models.
+
 ## Architecture
 
 The app launcher manages a local FastAPI service and private writable data. The service loads the MLX engine for diffusion or Torch MPS for Real-ESRGAN. GPU jobs run serially. Adapted Apple MLX reference modules provide the SD1.5 model structure; the accepted attention/convolution paths keep all pixels, tokens and sampling steps. Allocator limits and schedule metadata reuse are not a manually managed activation workspace.

@@ -33,3 +33,6 @@ venv/
 *.pyc
 *.zip
 logs/
+
+!docs/images/
+!docs/images/*.png
