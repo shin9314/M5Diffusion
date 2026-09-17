@@ -1,0 +1,35 @@
+.venv/
+work/
+/models/
+cache/
+__pycache__/
+.pytest_cache/
+*.gputrace
+benchmark/results/*.png
+benchmark/results/*.npy
+outputs/
+
+# Release hygiene
+*.safetensors
+*.ckpt
+*.pth
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.npy
+*.log
+*.prof
+*.dmg
+.DS_Store
+benchmark/controlled/
+benchmark/optimization/
+benchmark/results/
+
+# Public source hygiene
+venv/
+.env
+.env.*
+*.pyc
+*.zip
+logs/

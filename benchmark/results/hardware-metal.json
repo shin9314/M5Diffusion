@@ -1,0 +1,32 @@
+{
+  "apple10" : true,
+  "metal4" : true,
+  "unified_memory" : true,
+  "recommended_working_set" : 19069665280,
+  "fp8" : "SDK requires macOS 27; current OS 26.6: unavailable via this public tensor type",
+  "tensor_storage_probe" : {
+    "fp16" : {
+      "error" : "",
+      "allocation_succeeded" : 1
+    },
+    "int4" : {
+      "error" : "",
+      "allocation_succeeded" : 1
+    },
+    "fp32" : {
+      "error" : "",
+      "allocation_succeeded" : 1
+    },
+    "bf16" : {
+      "error" : "",
+      "allocation_succeeded" : 1
+    },
+    "int8" : {
+      "error" : "",
+      "allocation_succeeded" : 1
+    }
+  },
+  "max_buffer_length" : 14302248960,
+  "name" : "Apple M5",
+  "thermal_state" : 1
+}

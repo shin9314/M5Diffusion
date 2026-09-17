@@ -1,0 +1,31 @@
+{
+  "mlx": "0.32.2",
+  "torch": "2.8.0",
+  "python": "3.10.21",
+  "metal": {
+    "device_name": "Apple M5",
+    "max_recommended_working_set_size": 19069665280,
+    "memory_size": 25769803776,
+    "architecture": "applegpu_g17g",
+    "max_buffer_length": 14302248960,
+    "resource_limit": 499000
+  },
+  "mps_available": true,
+  "mlx_precision": {
+    "float32": {
+      "matmul_succeeded": true,
+      "value": 32.0
+    },
+    "float16": {
+      "matmul_succeeded": true,
+      "value": 32.0
+    },
+    "bfloat16": {
+      "matmul_succeeded": true,
+      "value": 32.0
+    }
+  },
+  "sysctl vm.swapusage": "vm.swapusage: total = 0.00M  used = 0.00M  free = 0.00M  (encrypted)\n",
+  "pmset -g therm": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded\n",
+  "memory_pressure -Q": "The system has 25769803776 (1572864 pages with a page size of 16384).\nSystem-wide memory free percentage: 46%\n"
+}

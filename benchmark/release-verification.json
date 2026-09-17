@@ -1,0 +1,96 @@
+{
+  "version": "v0.1.0-alpha",
+  "git_sha": "7cd24b1586efee14e29c203b112e0f57bd0968c5",
+  "generation": {
+    "status": "pass",
+    "raw_result": "benchmark/results/20260917-180928-release-v010-alpha.json",
+    "count": 11,
+    "consecutive_warm_count": 10,
+    "two_consecutive_covered": true,
+    "request": {
+      "prompt": "a small cozy cabin beside a lake, mountains in the background, golden morning light, landscape photography",
+      "negative_prompt": "",
+      "seed": 12345,
+      "width": 512,
+      "height": 512,
+      "steps": 20,
+      "cfg": 7.0
+    },
+    "median_warm": {
+      "total_time": 6.262633979000384,
+      "diffusion_time": 5.440189021001061,
+      "seconds_per_step": 0.27200945105005303,
+      "vae_time": 0.7930653750008787
+    },
+    "quality_vs_accepted": {
+      "ssim": 1.0,
+      "psnr_db": "infinite (pixel-identical)",
+      "pixel_identical": true,
+      "reference": "benchmark/results/20260917-171746-resume-screen-im2col-0.png",
+      "release_image": "benchmark/results/20260917-180928-release-v010-alpha-10.png"
+    }
+  },
+  "upscale": {
+    "status": "pass",
+    "wall_seconds": 1.6693580840001232,
+    "output": "work/release/upscale-2x.png",
+    "source": "work/release/upscale-source.png",
+    "mean_absolute_difference_vs_lanczos": 4.927265644073486,
+    "metadata": {
+      "model": "realesr-general-x4v3",
+      "model_sha256": "8dc7edb9ac80ccdc30c3a5dca6616509367f05fbc184ad95b731f05bece96292",
+      "scale": 2,
+      "native_scale": 4,
+      "input_size": [
+        512,
+        512
+      ],
+      "output_size": [
+        1024,
+        1024
+      ],
+      "device": "mps",
+      "precision": "fp16",
+      "tile_size": 192,
+      "tile_pad": 34,
+      "tiles": 9,
+      "model_load_seconds": 0.06082562500159838,
+      "inference_seconds": 1.0434236670007522,
+      "alpha_preserved": false,
+      "alpha_method": null,
+      "method": "Real-ESRGAN neural 4x + Lanczos downsample to 2x",
+      "total_seconds": 1.5813852089995635
+    }
+  },
+  "protected_source_sha256": {
+    "m5diffusion/engine/mlx_backend.py": "ead93b3bc1a1676d63fec499daa483c4696f82636ea2caea9341f3231dfe08b3",
+    "m5diffusion/mlx_backend/convolution.py": "49a2331d625bbd4180b5dd42fd4895d6db1a2dbfec66689e1a1ffd96cfddb2aa",
+    "m5diffusion/mlx_backend/attention.py": "2694a619fda08fb27bb243fe44dadaa43f44d008654c97c6459ef0b2b603acf2",
+    "m5diffusion/scheduler/dpm.py": "9a34e53a43fe2f39c52f27bc66171a3c80aa5e423b0d9a2e4458fbe319cba582",
+    "vendor/stable_diffusion/vae.py": "b10d7de37c7948ac9399e2f6c5ededf3814bf4318eef611a6f69bcf2bf8149ef"
+  },
+  "tests": {
+    "cpu_passed": 145,
+    "gpu_opt_in_passed": 18,
+    "failures": 0,
+    "error_cases": [
+      "missing_model",
+      "corrupt_model",
+      "non_image_upload",
+      "simulated_out_of_memory",
+      "write_permission_denied",
+      "port_in_use",
+      "server_start_failure",
+      "MLX_failure"
+    ]
+  },
+  "app_ui": {
+    "first_launch_missing_model_onboarding": "pass",
+    "local_checkpoint_import": "pass",
+    "two_consecutive_generations": "pass",
+    "upscaler_explicit_download": "pass",
+    "upload_upscale_compare_save": "pass",
+    "quit_stops_owned_server": "pass",
+    "restart": "pass"
+  }
+}

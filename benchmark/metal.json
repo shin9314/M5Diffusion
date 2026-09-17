@@ -1,0 +1,134 @@
+{
+  "scheduler": {
+    "512": {
+      "eager": {
+        "median_ms": 0.05703852498299966,
+        "min_ms": 0.05249164996712352,
+        "repeats": 20,
+        "batch": 20,
+        "max_abs_error": 0.0
+      },
+      "compiled": {
+        "median_ms": 0.03514582499519747,
+        "min_ms": 0.03305625004941248,
+        "repeats": 20,
+        "batch": 20,
+        "max_abs_error": 0.0
+      },
+      "custom_metal": {
+        "median_ms": 0.028799974961657426,
+        "min_ms": 0.02509795003788895,
+        "repeats": 20,
+        "batch": 20,
+        "max_abs_error": 1.52587890625e-05
+      }
+    },
+    "768": {
+      "eager": {
+        "median_ms": 0.0551218500277173,
+        "min_ms": 0.05206040004850365,
+        "repeats": 20,
+        "batch": 20,
+        "max_abs_error": 0.0
+      },
+      "compiled": {
+        "median_ms": 0.03519062502164161,
+        "min_ms": 0.032745850057835924,
+        "repeats": 20,
+        "batch": 20,
+        "max_abs_error": 0.0
+      },
+      "custom_metal": {
+        "median_ms": 0.02635312503116438,
+        "min_ms": 0.024793750071694376,
+        "repeats": 20,
+        "batch": 20,
+        "max_abs_error": 1.52587890625e-05
+      }
+    },
+    "1024": {
+      "eager": {
+        "median_ms": 0.055955200014068396,
+        "min_ms": 0.05074165001133224,
+        "repeats": 20,
+        "batch": 20,
+        "max_abs_error": 0.0
+      },
+      "compiled": {
+        "median_ms": 0.03432187500038708,
+        "min_ms": 0.031002100058685755,
+        "repeats": 20,
+        "batch": 20,
+        "max_abs_error": 0.0
+      },
+      "custom_metal": {
+        "median_ms": 0.025709350029501365,
+        "min_ms": 0.02395624997006962,
+        "repeats": 20,
+        "batch": 20,
+        "max_abs_error": 1.52587890625e-05
+      }
+    }
+  },
+  "tensor_ops": {
+    "fp16": {
+      "compiled_and_executed": true,
+      "max_abs_error": 8.58306884765625e-06,
+      "passed": true
+    },
+    "bf16": {
+      "compiled_and_executed": true,
+      "max_abs_error": 5.7220458984375e-06,
+      "passed": true
+    },
+    "int4": {
+      "compiled_and_executed": false,
+      "passed": false,
+      "reason": "Native packed INT4 MPP arithmetic not implemented; allocation alone does not establish arithmetic support."
+    }
+  },
+  "matmul_fp16": {
+    "320x320x320": {
+      "native": {
+        "median_ms": 0.024003149974305416,
+        "min_ms": 0.02300830001331633,
+        "repeats": 20,
+        "batch": 20
+      },
+      "mpp": {
+        "median_ms": 0.028986450024603982,
+        "min_ms": 0.026481250006327173,
+        "repeats": 20,
+        "batch": 20
+      }
+    },
+    "1024x320x320": {
+      "native": {
+        "median_ms": 0.0469021000299108,
+        "min_ms": 0.0451582999630773,
+        "repeats": 20,
+        "batch": 20
+      },
+      "mpp": {
+        "median_ms": 0.03508127506393066,
+        "min_ms": 0.0315895999847271,
+        "repeats": 20,
+        "batch": 20
+      }
+    },
+    "1024x768x320": {
+      "native": {
+        "median_ms": 0.0708864500211348,
+        "min_ms": 0.06847915001344518,
+        "repeats": 20,
+        "batch": 20
+      },
+      "mpp": {
+        "median_ms": 0.13539167503040517,
+        "min_ms": 0.09097914999074419,
+        "repeats": 20,
+        "batch": 20
+      }
+    }
+  }
+}

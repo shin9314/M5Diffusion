@@ -1,0 +1,11 @@
+{
+  "baseline_restored_pixel_exact": true,
+  "lora_image_changed": true,
+  "applied_loras": [
+    {
+      "id": "lora-4cb1fe92137ef1b1be9011a82d0cc04d58e2207f54b0c8e601f127bc53fb7277",
+      "scale": 0.7
+    }
+  ],
+  "restored_loras": []
+}

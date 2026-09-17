@@ -1,0 +1,18 @@
+{
+  "a": "benchmark/results/20260916-174219-mlx-naive-0.png",
+  "b": "benchmark/results/20260916-174919-mlx-padded-0.png",
+  "psnr": 49.38203198339713,
+  "ssim": 0.9984410405158997,
+  "pixel_mae": 0.0014982634456828237,
+  "pixel_max_abs": 0.0941176563501358,
+  "conditioning": {
+    "rmse": 0.0,
+    "max_abs": 0.0,
+    "relative_l2": 0.0
+  },
+  "latent": {
+    "rmse": 0.0065582990646362305,
+    "max_abs": 0.10085704922676086,
+    "relative_l2": 0.007327334024012089
+  }
+}

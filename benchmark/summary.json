@@ -1,0 +1,2007 @@
+{
+  "runs": [
+    {
+      "file": "20260916-174219-mlx-naive.json",
+      "protocol": {
+        "request": {
+          "prompt": "a small cozy cabin beside a lake, mountains in the background, golden morning light, landscape photography",
+          "negative_prompt": "",
+          "seed": 12345,
+          "width": 512,
+          "height": 512,
+          "steps": 20,
+          "cfg": 7
+        },
+        "model": "<project>/models/sd15",
+        "sampler": "DPM++ 2M",
+        "schedule": "Karras rho=7",
+        "rng": "NumPy PCG64 float32 NCHW shared bytes",
+        "precision": "UNet+CLIP fp16; VAE+latents fp32"
+      },
+      "model_load_time": 1.345607374998508,
+      "backend": "mlx",
+      "quantize": 0,
+      "timing_schema": "legacy-stage-sum-v1",
+      "cold": {
+        "n": 1,
+        "stages": {
+          "prepare_time": {
+            "median": 0.8755539169997064,
+            "min": 0.8755539169997064,
+            "max": 0.8755539169997064,
+            "n": 1
+          },
+          "text_encoder_time": {
+            "median": 1.0933957090001059,
+            "min": 1.0933957090001059,
+            "max": 1.0933957090001059,
+            "n": 1
+          },
+          "diffusion_time": {
+            "median": 10.989467166000395,
+            "min": 10.989467166000395,
+            "max": 10.989467166000395,
+            "n": 1
+          },
+          "vae_time": {
+            "median": 3.326962708000792,
+            "min": 3.326962708000792,
+            "max": 3.326962708000792,
+            "n": 1
+          },
+          "readback_time": {
+            "median": 0.005823458001032122,
+            "min": 0.005823458001032122,
+            "max": 0.005823458001032122,
+            "n": 1
+          },
+          "total_time": {
+            "median": 16.29120295800203,
+            "min": 16.29120295800203,
+            "max": 16.29120295800203,
+            "n": 1
+          },
+          "seconds_per_step": {
+            "median": 0.5494733583000198,
+            "min": 0.5494733583000198,
+            "max": 0.5494733583000198,
+            "n": 1
+          },
+          "png_time": {
+            "median": 0.10533916699932888,
+            "min": 0.10533916699932888,
+            "max": 0.10533916699932888,
+            "n": 1
+          }
+        }
+      },
+      "warm": {
+        "n": 1,
+        "stages": {
+          "prepare_time": {
+            "median": 0.03835958400122763,
+            "min": 0.03835958400122763,
+            "max": 0.03835958400122763,
+            "n": 1
+          },
+          "text_encoder_time": {
+            "median": 0.04628966599921114,
+            "min": 0.04628966599921114,
+            "max": 0.04628966599921114,
+            "n": 1
+          },
+          "diffusion_time": {
+            "median": 9.0600298749996,
+            "min": 9.0600298749996,
+            "max": 9.0600298749996,
+            "n": 1
+          },
+          "vae_time": {
+            "median": 1.4845244999996794,
+            "min": 1.4845244999996794,
+            "max": 1.4845244999996794,
+            "n": 1
+          },
+          "readback_time": {
+            "median": 0.00047591600014129654,
+            "min": 0.00047591600014129654,
+            "max": 0.00047591600014129654,
+            "n": 1
+          },
+          "total_time": {
+            "median": 10.62967954099986,
+            "min": 10.62967954099986,
+            "max": 10.62967954099986,
+            "n": 1
+          },
+          "seconds_per_step": {
+            "median": 0.45300149374998,
+            "min": 0.45300149374998,
+            "max": 0.45300149374998,
+            "n": 1
+          },
+          "png_time": {
+            "median": 0.01704624999911175,
+            "min": 0.01704624999911175,
+            "max": 0.01704624999911175,
+            "n": 1
+          }
+        }
+      },
+      "environment": {
+        "before": {
+          "system_memory_used_mb": 8478.78125,
+          "system_memory_available_mb": 5963.015625,
+          "swap_mb": 0.0,
+          "temperature_c": null,
+          "power_w": null,
+          "gpu_utilization_percent": null,
+          "gpu_frequency_mhz": null,
+          "thermal_state": 1,
+          "memory_pressure_raw": "The system has 25769803776 (1572864 pages with a page size of 16384).\nSystem-wide memory free percentage: 49%"
+        },
+        "after": {
+          "system_memory_used_mb": 18060.390625,
+          "system_memory_available_mb": 4362.5,
+          "swap_mb": 9787.1875,
+          "temperature_c": null,
+          "power_w": null,
+          "gpu_utilization_percent": null,
+          "gpu_frequency_mhz": null,
+          "thermal_state": 1,
+          "memory_pressure_raw": "The system has 25769803776 (1572864 pages with a page size of 16384).\nSystem-wide memory free percentage: 34%"
+        }
+      }
+    },
+    {
+      "file": "20260916-174334-mps-matched.json",
+      "protocol": {
+        "request": {
+          "prompt": "a small cozy cabin beside a lake, mountains in the background, golden morning light, landscape photography",
+          "negative_prompt": "",
+          "seed": 12345,
+          "width": 512,
+          "height": 512,
+          "steps": 20,
+          "cfg": 7
+        },
+        "model": "<project>/models/sd15",
+        "sampler": "DPM++ 2M",
+        "schedule": "Karras rho=7",
+        "rng": "NumPy PCG64 float32 NCHW shared bytes",
+        "precision": "UNet+CLIP fp16; VAE+latents fp32"
+      },
+      "model_load_time": 2.846182625000438,
+      "backend": "mps",
+      "quantize": 0,
+      "timing_schema": "legacy-stage-sum-v1",
+      "cold": {
+        "n": 1,
+        "stages": {
+          "prepare_time": {
+            "median": 0.02820308399896021,
+            "min": 0.02820308399896021,
+            "max": 0.02820308399896021,
+            "n": 1
+          },
+          "text_encoder_time": {
+            "median": 1.1895817919994442,
+            "min": 1.1895817919994442,
+            "max": 1.1895817919994442,
+            "n": 1
+          },
+          "diffusion_time": {
+            "median": 15.325944291998894,
+            "min": 15.325944291998894,
+            "max": 15.325944291998894,
+            "n": 1
+          },
+          "vae_time": {
+            "median": 2.4175505000002886,
+            "min": 2.4175505000002886,
+            "max": 2.4175505000002886,
+            "n": 1
+          },
+          "readback_time": {
+            "median": 0.0004607089995261049,
+            "min": 0.0004607089995261049,
+            "max": 0.0004607089995261049,
+            "n": 1
+          },
+          "total_time": {
+            "median": 18.961740376997113,
+            "min": 18.961740376997113,
+            "max": 18.961740376997113,
+            "n": 1
+          },
+          "seconds_per_step": {
+            "median": 0.7662972145999447,
+            "min": 0.7662972145999447,
+            "max": 0.7662972145999447,
+            "n": 1
+          },
+          "png_time": {
+            "median": 0.02529350000077102,
+            "min": 0.02529350000077102,
+            "max": 0.02529350000077102,
+            "n": 1
+          }
+        }
+      },
+      "warm": {
+        "n": 1,
+        "stages": {
+          "prepare_time": {
+            "median": 0.032631124999170424,
+            "min": 0.032631124999170424,
+            "max": 0.032631124999170424,
+            "n": 1
+          },
+          "text_encoder_time": {
+            "median": 0.01972462499907124,
+            "min": 0.01972462499907124,
+            "max": 0.01972462499907124,
+            "n": 1
+          },
+          "diffusion_time": {
+            "median": 12.649033291998421,
+            "min": 12.649033291998421,
+            "max": 12.649033291998421,
+            "n": 1
+          },
+          "vae_time": {
+            "median": 1.4794969169997785,
+            "min": 1.4794969169997785,
+            "max": 1.4794969169997785,
+            "n": 1
+          },
+          "readback_time": {
+            "median": 0.0007759170002827886,
+            "min": 0.0007759170002827886,
+            "max": 0.0007759170002827886,
+            "n": 1
+          },
+          "total_time": {
+            "median": 14.181661875996724,
+            "min": 14.181661875996724,
+            "max": 14.181661875996724,
+            "n": 1
+          },
+          "seconds_per_step": {
+            "median": 0.6324516645999211,
+            "min": 0.6324516645999211,
+            "max": 0.6324516645999211,
+            "n": 1
+          },
+          "png_time": {
+            "median": 0.03271225000025879,
+            "min": 0.03271225000025879,
+            "max": 0.03271225000025879,
+            "n": 1
+          }
+        }
+      },
+      "environment": {
+        "before": {
+          "system_memory_used_mb": 7971.0,
+          "system_memory_available_mb": 14899.859375,
+          "swap_mb": 9307.1875,
+          "temperature_c": null,
+          "power_w": null,
+          "gpu_utilization_percent": null,
+          "gpu_frequency_mhz": null,
+          "thermal_state": 1,
+          "memory_pressure_raw": "The system has 25769803776 (1572864 pages with a page size of 16384).\nSystem-wide memory free percentage: 84%"
+        },
+        "after": {
+          "system_memory_used_mb": 14746.765625,
+          "system_memory_available_mb": 8448.265625,
+          "swap_mb": 9235.1875,
+          "temperature_c": null,
+          "power_w": null,
+          "gpu_utilization_percent": null,
+          "gpu_frequency_mhz": null,
+          "thermal_state": 1,
+          "memory_pressure_raw": "The system has 25769803776 (1572864 pages with a page size of 16384).\nSystem-wide memory free percentage: 70%"
+        }
+      }
+    },
+    {
+      "file": "20260916-174419-mlx-bounded.json",
+      "protocol": {
+        "request": {
+          "prompt": "a small cozy cabin beside a lake, mountains in the background, golden morning light, landscape photography",
+          "negative_prompt": "",
+          "seed": 12345,
+          "width": 512,
+          "height": 512,
+          "steps": 20,
+          "cfg": 7
+        },
+        "model": "<project>/models/sd15",
+        "sampler": "DPM++ 2M",
+        "schedule": "Karras rho=7",
+        "rng": "NumPy PCG64 float32 NCHW shared bytes",
+        "precision": "UNet+CLIP fp16; VAE+latents fp32"
+      },
+      "model_load_time": 0.28271966699867335,
+      "backend": "mlx",
+      "quantize": 0,
+      "timing_schema": "legacy-stage-sum-v1",
+      "cold": {
+        "n": 1,
+        "stages": {
+          "prepare_time": {
+            "median": 0.5058394580009917,
+            "min": 0.5058394580009917,
+            "max": 0.5058394580009917,
+            "n": 1
+          },
+          "text_encoder_time": {
+            "median": 0.016854458999659983,
+            "min": 0.016854458999659983,
+            "max": 0.016854458999659983,
+            "n": 1
+          },
+          "diffusion_time": {
+            "median": 14.075129000000743,
+            "min": 14.075129000000743,
+            "max": 14.075129000000743,
+            "n": 1
+          },
+          "vae_time": {
+            "median": 1.1494288339999912,
+            "min": 1.1494288339999912,
+            "max": 1.1494288339999912,
+            "n": 1
+          },
+          "readback_time": {
+            "median": 0.0012302499999350403,
+            "min": 0.0012302499999350403,
+            "max": 0.0012302499999350403,
+            "n": 1
+          },
+          "total_time": {
+            "median": 15.748482001001321,
+            "min": 15.748482001001321,
+            "max": 15.748482001001321,
+            "n": 1
+          },
+          "seconds_per_step": {
+            "median": 0.7037564500000372,
+            "min": 0.7037564500000372,
+            "max": 0.7037564500000372,
+            "n": 1
+          },
+          "png_time": {
+            "median": 0.06484695900144288,
+            "min": 0.06484695900144288,
+            "max": 0.06484695900144288,
+            "n": 1
+          }
+        }
+      },
+      "warm": {
+        "n": 1,
+        "stages": {
+          "prepare_time": {
+            "median": 0.0802867909987981,
+            "min": 0.0802867909987981,
+            "max": 0.0802867909987981,
+            "n": 1
+          },
+          "text_encoder_time": {
+            "median": 0.020570750000842963,
+            "min": 0.020570750000842963,
+            "max": 0.020570750000842963,
+            "n": 1
+          },
+          "diffusion_time": {
+            "median": 19.98345912500008,
+            "min": 19.98345912500008,
+            "max": 19.98345912500008,
+            "n": 1
+          },
+          "vae_time": {
+            "median": 1.217251916999885,
+            "min": 1.217251916999885,
+            "max": 1.217251916999885,
+            "n": 1
+          },
+          "readback_time": {
+            "median": 0.0009165419996861601,
+            "min": 0.0009165419996861601,
+            "max": 0.0009165419996861601,
+            "n": 1
+          },
+          "total_time": {
+            "median": 21.302485124999293,
+            "min": 21.302485124999293,
+            "max": 21.302485124999293,
+            "n": 1
+          },
+          "seconds_per_step": {
+            "median": 0.999172956250004,
+            "min": 0.999172956250004,
+            "max": 0.999172956250004,
+            "n": 1
+          },
+          "png_time": {
+            "median": 0.09105158300008043,
+            "min": 0.09105158300008043,
+            "max": 0.09105158300008043,
+            "n": 1
+          }
+        }
+      },
+      "environment": {
+        "before": {
+          "system_memory_used_mb": 10067.46875,
+          "system_memory_available_mb": 13087.015625,
+          "swap_mb": 9203.1875,
+          "temperature_c": null,
+          "power_w": null,
+          "gpu_utilization_percent": null,
+          "gpu_frequency_mhz": null,
+          "thermal_state": 1,
+          "memory_pressure_raw": "The system has 25769803776 (1572864 pages with a page size of 16384).\nSystem-wide memory free percentage: 84%"
+        },
+        "after": {
+          "system_memory_used_mb": 10623.765625,
+          "system_memory_available_mb": 12548.1875,
+          "swap_mb": 9163.1875,
+          "temperature_c": null,
+          "power_w": null,
+          "gpu_utilization_percent": null,
+          "gpu_frequency_mhz": null,
+          "thermal_state": 1,
+          "memory_pressure_raw": "The system has 25769803776 (1572864 pages with a page size of 16384).\nSystem-wide memory free percentage: 83%"
+        }
+      }
+    },
+    {
+      "file": "20260916-174505-mlx-compiled.json",
+      "protocol": {
+        "request": {
+          "prompt": "a small cozy cabin beside a lake, mountains in the background, golden morning light, landscape photography",
+          "negative_prompt": "",
+          "seed": 12345,
+          "width": 512,
+          "height": 512,
+          "steps": 20,
+          "cfg": 7
+        },
+        "model": "<project>/models/sd15",
+        "sampler": "DPM++ 2M",
+        "schedule": "Karras rho=7",
+        "rng": "NumPy PCG64 float32 NCHW shared bytes",
+        "precision": "UNet+CLIP fp16; VAE+latents fp32"
+      },
+      "model_load_time": 0.24639787500018429,
+      "backend": "mlx",
+      "quantize": 0,
+      "timing_schema": "legacy-stage-sum-v1",
+      "cold": {
+        "n": 1,
+        "stages": {
+          "prepare_time": {
+            "median": 0.5421820419996948,
+            "min": 0.5421820419996948,
+            "max": 0.5421820419996948,
+            "n": 1
+          },
+          "text_encoder_time": {
+            "median": 0.015419458999531344,
+            "min": 0.015419458999531344,
+            "max": 0.015419458999531344,
+            "n": 1
+          },
+          "diffusion_time": {
+            "median": 20.546526707999874,
+            "min": 20.546526707999874,
+            "max": 20.546526707999874,
+            "n": 1
+          },
+          "vae_time": {
+            "median": 1.2063789579988224,
+            "min": 1.2063789579988224,
+            "max": 1.2063789579988224,
+            "n": 1
+          },
+          "readback_time": {
+            "median": 0.0007367090001935139,
+            "min": 0.0007367090001935139,
+            "max": 0.0007367090001935139,
+            "n": 1
+          },
+          "total_time": {
+            "median": 22.311243875998116,
+            "min": 22.311243875998116,
+            "max": 22.311243875998116,
+            "n": 1
+          },
+          "seconds_per_step": {
+            "median": 1.0273263353999937,
+            "min": 1.0273263353999937,
+            "max": 1.0273263353999937,
+            "n": 1
+          },
+          "png_time": {
+            "median": 0.06429266699888103,
+            "min": 0.06429266699888103,
+            "max": 0.06429266699888103,
+            "n": 1
+          }
+        }
+      },
+      "warm": {
+        "n": 2,
+        "stages": {
+          "prepare_time": {
+            "median": 0.08515789600096468,
+            "min": 0.06768058400120935,
+            "max": 0.10263520800072001,
+            "n": 2
+          },
+          "text_encoder_time": {
+            "median": 0.015507729500313872,
+            "min": 0.014644250000856118,
+            "max": 0.016371208999771625,
+            "n": 2
+          },
+          "diffusion_time": {
+            "median": 19.85797766650012,
+            "min": 19.575927625000986,
+            "max": 20.140027707999252,
+            "n": 2
+          },
+          "vae_time": {
+            "median": 1.4158118539999123,
+            "min": 1.3533409159990697,
+            "max": 1.4782827920007549,
+            "n": 2
+          },
+          "readback_time": {
+            "median": 0.0008351454989679041,
+            "min": 0.0006457499985117465,
+            "max": 0.0010245409994240617,
+            "n": 2
+          },
+          "total_time": {
+            "median": 21.375290291500278,
+            "min": 21.012617916001545,
+            "max": 21.73796266699901,
+            "n": 2
+          },
+          "seconds_per_step": {
+            "median": 0.992898883325006,
+            "min": 0.9787963812500493,
+            "max": 1.0070013853999626,
+            "n": 2
+          },
+          "png_time": {
+            "median": 0.041850771000099485,
+            "min": 0.04008983300082036,
+            "max": 0.04361170899937861,
+            "n": 2
+          }
+        }
+      },
+      "environment": {
+        "before": {
+          "system_memory_used_mb": 8610.375,
+          "system_memory_available_mb": 14542.203125,
+          "swap_mb": 9155.1875,
+          "temperature_c": null,
+          "power_w": null,
+          "gpu_utilization_percent": null,
+          "gpu_frequency_mhz": null,
+          "thermal_state": 1,
+          "memory_pressure_raw": "The system has 25769803776 (1572864 pages with a page size of 16384).\nSystem-wide memory free percentage: 84%"
+        },
+        "after": {
+          "system_memory_used_mb": 13439.21875,
+          "system_memory_available_mb": 9557.640625,
+          "swap_mb": 9091.1875,
+          "temperature_c": null,
+          "power_w": null,
+          "gpu_utilization_percent": null,
+          "gpu_frequency_mhz": null,
+          "thermal_state": 1,
+          "memory_pressure_raw": "The system has 25769803776 (1572864 pages with a page size of 16384).\nSystem-wide memory free percentage: 75%"
+        }
+      }
+    },
+    {
+      "file": "20260916-174919-mlx-padded.json",
+      "protocol": {
+        "request": {
+          "prompt": "a small cozy cabin beside a lake, mountains in the background, golden morning light, landscape photography",
+          "negative_prompt": "",
+          "seed": 12345,
+          "width": 512,
+          "height": 512,
+          "steps": 20,
+          "cfg": 7
+        },
+        "model": "<project>/models/sd15",
+        "sampler": "DPM++ 2M",
+        "schedule": "Karras rho=7",
+        "rng": "NumPy PCG64 float32 NCHW shared bytes",
+        "precision": "UNet+CLIP fp16; VAE+latents fp32"
+      },
+      "model_load_time": 0.26454020799974387,
+      "backend": "mlx",
+      "quantize": 0,
+      "timing_schema": "legacy-stage-sum-v1",
+      "cold": {
+        "n": 1,
+        "stages": {
+          "prepare_time": {
+            "median": 0.6545239999995829,
+            "min": 0.6545239999995829,
+            "max": 0.6545239999995829,
+            "n": 1
+          },
+          "text_encoder_time": {
+            "median": 0.008335665999766206,
+            "min": 0.008335665999766206,
+            "max": 0.008335665999766206,
+            "n": 1
+          },
+          "diffusion_time": {
+            "median": 9.306823040999006,
+            "min": 9.306823040999006,
+            "max": 9.306823040999006,
+            "n": 1
+          },
+          "vae_time": {
+            "median": 0.8621068749998813,
+            "min": 0.8621068749998813,
+            "max": 0.8621068749998813,
+            "n": 1
+          },
+          "readback_time": {
+            "median": 0.0004969580004399177,
+            "min": 0.0004969580004399177,
+            "max": 0.0004969580004399177,
+            "n": 1
+          },
+          "total_time": {
+            "median": 10.832286539998677,
+            "min": 10.832286539998677,
+            "max": 10.832286539998677,
+            "n": 1
+          },
+          "seconds_per_step": {
+            "median": 0.4653411520499503,
+            "min": 0.4653411520499503,
+            "max": 0.4653411520499503,
+            "n": 1
+          },
+          "png_time": {
+            "median": 0.02819179100151814,
+            "min": 0.02819179100151814,
+            "max": 0.02819179100151814,
+            "n": 1
+          }
+        }
+      },
+      "warm": {
+        "n": 2,
+        "stages": {
+          "prepare_time": {
+            "median": 0.024501166500158433,
+            "min": 0.02261887500026205,
+            "max": 0.026383458000054816,
+            "n": 2
+          },
+          "text_encoder_time": {
+            "median": 0.011267312000200036,
+            "min": 0.009787208000489045,
+            "max": 0.012747415999911027,
+            "n": 2
+          },
+          "diffusion_time": {
+            "median": 9.531824333499571,
+            "min": 9.26597962499909,
+            "max": 9.797669042000052,
+            "n": 2
+          },
+          "vae_time": {
+            "median": 0.8609070624988817,
+            "min": 0.8500484589985717,
+            "max": 0.8717656659991917,
+            "n": 2
+          },
+          "readback_time": {
+            "median": 0.00023572950067318743,
+            "min": 0.00022958400040806737,
+            "max": 0.0002418750009383075,
+            "n": 2
+          },
+          "total_time": {
+            "median": 10.428735603999485,
+            "min": 10.177118039999186,
+            "max": 10.680353167999783,
+            "n": 2
+          },
+          "seconds_per_step": {
+            "median": 0.47659121667497856,
+            "min": 0.4632989812499545,
+            "max": 0.4898834521000026,
+            "n": 2
+          },
+          "png_time": {
+            "median": 0.014084104000176012,
+            "min": 0.01362258299923269,
+            "max": 0.014545625001119333,
+            "n": 2
+          }
+        }
+      },
+      "environment": {
+        "before": {
+          "system_memory_used_mb": 11802.671875,
+          "system_memory_available_mb": 11360.828125,
+          "swap_mb": 8979.1875,
+          "temperature_c": null,
+          "power_w": null,
+          "gpu_utilization_percent": null,
+          "gpu_frequency_mhz": null,
+          "thermal_state": 1,
+          "memory_pressure_raw": "The system has 25769803776 (1572864 pages with a page size of 16384).\nSystem-wide memory free percentage: 85%"
+        },
+        "after": {
+          "system_memory_used_mb": 15250.375,
+          "system_memory_available_mb": 7913.4375,
+          "swap_mb": 8955.1875,
+          "temperature_c": null,
+          "power_w": null,
+          "gpu_utilization_percent": null,
+          "gpu_frequency_mhz": null,
+          "thermal_state": 1,
+          "memory_pressure_raw": "The system has 25769803776 (1572864 pages with a page size of 16384).\nSystem-wide memory free percentage: 62%"
+        }
+      }
+    },
+    {
+      "file": "20260916-175409-padded-compile.json",
+      "protocol": {
+        "request": {
+          "prompt": "a small cozy cabin beside a lake, mountains in the background, golden morning light, landscape photography",
+          "negative_prompt": "",
+          "seed": 12345,
+          "width": 512,
+          "height": 512,
+          "steps": 20,
+          "cfg": 7
+        },
+        "model": "<project>/models/sd15",
+        "sampler": "DPM++ 2M",
+        "schedule": "Karras rho=7",
+        "rng": "NumPy PCG64 float32 NCHW shared bytes",
+        "precision": "UNet+CLIP fp16; VAE+latents fp32"
+      },
+      "model_load_time": 0.6495554170014657,
+      "backend": "mlx",
+      "quantize": 0,
+      "timing_schema": "legacy-stage-sum-v1",
+      "cold": {
+        "n": 1,
+        "stages": {
+          "prepare_time": {
+            "median": 0.6772068749996834,
+            "min": 0.6772068749996834,
+            "max": 0.6772068749996834,
+            "n": 1
+          },
+          "text_encoder_time": {
+            "median": 0.016034666999985348,
+            "min": 0.016034666999985348,
+            "max": 0.016034666999985348,
+            "n": 1
+          },
+          "diffusion_time": {
+            "median": 6.396226250000836,
+            "min": 6.396226250000836,
+            "max": 6.396226250000836,
+            "n": 1
+          },
+          "vae_time": {
+            "median": 0.8426923339993664,
+            "min": 0.8426923339993664,
+            "max": 0.8426923339993664,
+            "n": 1
+          },
+          "readback_time": {
+            "median": 0.0003856250004901085,
+            "min": 0.0003856250004901085,
+            "max": 0.0003856250004901085,
+            "n": 1
+          },
+          "total_time": {
+            "median": 7.932545751000362,
+            "min": 7.932545751000362,
+            "max": 7.932545751000362,
+            "n": 1
+          },
+          "seconds_per_step": {
+            "median": 0.3198113125000418,
+            "min": 0.3198113125000418,
+            "max": 0.3198113125000418,
+            "n": 1
+          },
+          "png_time": {
+            "median": 0.02772762499989767,
+            "min": 0.02772762499989767,
+            "max": 0.02772762499989767,
+            "n": 1
+          }
+        }
+      },
+      "warm": {
+        "n": 2,
+        "stages": {
+          "prepare_time": {
+            "median": 0.025333145999866247,
+            "min": 0.024813459000142757,
+            "max": 0.025852832999589737,
+            "n": 2
+          },
+          "text_encoder_time": {
+            "median": 0.011938353999539686,
+            "min": 0.011730332998922677,
+            "max": 0.012146375000156695,
+            "n": 2
+          },
+          "diffusion_time": {
+            "median": 7.337558750000426,
+            "min": 7.295562125000288,
+            "max": 7.379555375000564,
+            "n": 2
+          },
+          "vae_time": {
+            "median": 0.8192723330002991,
+            "min": 0.8128546250009094,
+            "max": 0.8256900409996888,
+            "n": 2
+          },
+          "readback_time": {
+            "median": 0.00033131249892903725,
+            "min": 0.0003124999984720489,
+            "max": 0.0003501249993860256,
+            "n": 2
+          },
+          "total_time": {
+            "median": 8.19443389549906,
+            "min": 8.158562124999662,
+            "max": 8.230305665998458,
+            "n": 2
+          },
+          "seconds_per_step": {
+            "median": 0.3668779375000213,
+            "min": 0.3647781062500144,
+            "max": 0.3689777687500282,
+            "n": 2
+          },
+          "png_time": {
+            "median": 0.020683541499238345,
+            "min": 0.0204148749999149,
+            "max": 0.02095220799856179,
+            "n": 2
+          }
+        }
+      },
+      "environment": {
+        "before": {
+          "system_memory_used_mb": 10319.5,
+          "system_memory_available_mb": 12797.71875,
+          "swap_mb": 8835.1875,
+          "temperature_c": null,
+          "power_w": null,
+          "gpu_utilization_percent": null,
+          "gpu_frequency_mhz": null,
+          "thermal_state": 0,
+          "memory_pressure_raw": "The system has 25769803776 (1572864 pages with a page size of 16384).\nSystem-wide memory free percentage: 85%"
+        },
+        "after": {
+          "system_memory_used_mb": 16268.109375,
+          "system_memory_available_mb": 6551.765625,
+          "swap_mb": 8811.1875,
+          "temperature_c": null,
+          "power_w": null,
+          "gpu_utilization_percent": null,
+          "gpu_frequency_mhz": null,
+          "thermal_state": 0,
+          "memory_pressure_raw": "The system has 25769803776 (1572864 pages with a page size of 16384).\nSystem-wide memory free percentage: 59%"
+        }
+      }
+    },
+    {
+      "file": "20260916-175455-final-mps.json",
+      "protocol": {
+        "request": {
+          "prompt": "a small cozy cabin beside a lake, mountains in the background, golden morning light, landscape photography",
+          "negative_prompt": "",
+          "seed": 12345,
+          "width": 512,
+          "height": 512,
+          "steps": 20,
+          "cfg": 7
+        },
+        "model": "<project>/models/sd15",
+        "sampler": "DPM++ 2M",
+        "schedule": "Karras rho=7",
+        "rng": "NumPy PCG64 float32 NCHW shared bytes",
+        "precision": "UNet+CLIP fp16; VAE+latents fp32"
+      },
+      "model_load_time": 1.6400728339995112,
+      "backend": "mps",
+      "quantize": 0,
+      "timing_schema": "generation-wall-v2",
+      "cold": {
+        "n": 1,
+        "stages": {
+          "prepare_time": {
+            "median": 0.05706412500148872,
+            "min": 0.05706412500148872,
+            "max": 0.05706412500148872,
+            "n": 1
+          },
+          "text_encoder_time": {
+            "median": 0.10518695800055866,
+            "min": 0.10518695800055866,
+            "max": 0.10518695800055866,
+            "n": 1
+          },
+          "diffusion_time": {
+            "median": 9.248499291999906,
+            "min": 9.248499291999906,
+            "max": 9.248499291999906,
+            "n": 1
+          },
+          "vae_time": {
+            "median": 0.9753542920007021,
+            "min": 0.9753542920007021,
+            "max": 0.9753542920007021,
+            "n": 1
+          },
+          "readback_time": {
+            "median": 0.00036787499993806705,
+            "min": 0.00036787499993806705,
+            "max": 0.00036787499993806705,
+            "n": 1
+          },
+          "latent_init_time": {
+            "median": 0.0021032910008216277,
+            "min": 0.0021032910008216277,
+            "max": 0.0021032910008216277,
+            "n": 1
+          },
+          "postprocess_time": {
+            "median": 0.0006928330003574956,
+            "min": 0.0006928330003574956,
+            "max": 0.0006928330003574956,
+            "n": 1
+          },
+          "diagnostic_time": {
+            "median": 0.008209708999856957,
+            "min": 0.008209708999856957,
+            "max": 0.008209708999856957,
+            "n": 1
+          },
+          "stage_sum_time": {
+            "median": 10.389268666003773,
+            "min": 10.389268666003773,
+            "max": 10.389268666003773,
+            "n": 1
+          },
+          "total_time": {
+            "median": 10.389371874001881,
+            "min": 10.389371874001881,
+            "max": 10.389371874001881,
+            "n": 1
+          },
+          "wall_time": {
+            "median": 10.397581583001738,
+            "min": 10.397581583001738,
+            "max": 10.397581583001738,
+            "n": 1
+          },
+          "seconds_per_step": {
+            "median": 0.46242496459999527,
+            "min": 0.46242496459999527,
+            "max": 0.46242496459999527,
+            "n": 1
+          },
+          "png_time": {
+            "median": 0.019388374999834923,
+            "min": 0.019388374999834923,
+            "max": 0.019388374999834923,
+            "n": 1
+          }
+        }
+      },
+      "warm": {
+        "n": 3,
+        "stages": {
+          "prepare_time": {
+            "median": 0.028296708000198123,
+            "min": 0.0269477090005239,
+            "max": 0.05448412500118138,
+            "n": 3
+          },
+          "text_encoder_time": {
+            "median": 0.01612954099982744,
+            "min": 0.014071167001020513,
+            "max": 0.016647124999508378,
+            "n": 3
+          },
+          "diffusion_time": {
+            "median": 8.20377712499976,
+            "min": 7.973234040999159,
+            "max": 9.198125750001054,
+            "n": 3
+          },
+          "vae_time": {
+            "median": 0.9149057909999101,
+            "min": 0.8348313329988741,
+            "max": 0.9551042080001935,
+            "n": 3
+          },
+          "readback_time": {
+            "median": 0.0004895830006717006,
+            "min": 0.000352167000528425,
+            "max": 0.03196383300019079,
+            "n": 3
+          },
+          "latent_init_time": {
+            "median": 0.000809209001090494,
+            "min": 0.0007537910005339654,
+            "max": 0.0016832090004754718,
+            "n": 3
+          },
+          "postprocess_time": {
+            "median": 0.0011374580008123303,
+            "min": 0.000794375000623404,
+            "max": 0.0021555839994107373,
+            "n": 3
+          },
+          "diagnostic_time": {
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3
+          },
+          "stage_sum_time": {
+            "median": 9.163006542003131,
+            "min": 8.914069831998859,
+            "max": 10.199617458003559,
+            "n": 3
+          },
+          "total_time": {
+            "median": 9.163091082999017,
+            "min": 8.914341375000731,
+            "max": 10.199720624999827,
+            "n": 3
+          },
+          "wall_time": {
+            "median": 9.163091082999017,
+            "min": 8.914341375000731,
+            "max": 10.199720624999827,
+            "n": 3
+          },
+          "seconds_per_step": {
+            "median": 0.410188856249988,
+            "min": 0.398661702049958,
+            "max": 0.4599062875000527,
+            "n": 3
+          },
+          "png_time": {
+            "median": 0.018023832999460865,
+            "min": 0.017179958000269835,
+            "max": 0.01871516699975473,
+            "n": 3
+          }
+        }
+      },
+      "environment": {
+        "before": {
+          "system_memory_used_mb": 8584.828125,
+          "system_memory_available_mb": 14238.328125,
+          "swap_mb": 8811.1875,
+          "temperature_c": null,
+          "power_w": null,
+          "gpu_utilization_percent": 77.0,
+          "gpu_frequency_mhz": null,
+          "thermal_state": 0,
+          "memory_pressure_raw": "The system has 25769803776 (1572864 pages with a page size of 16384).\nSystem-wide memory free percentage: 84%"
+        },
+        "after": {
+          "system_memory_used_mb": 15423.046875,
+          "system_memory_available_mb": 7414.65625,
+          "swap_mb": 8795.1875,
+          "temperature_c": null,
+          "power_w": null,
+          "gpu_utilization_percent": 99.0,
+          "gpu_frequency_mhz": null,
+          "thermal_state": 1,
+          "memory_pressure_raw": "The system has 25769803776 (1572864 pages with a page size of 16384).\nSystem-wide memory free percentage: 66%"
+        }
+      }
+    },
+    {
+      "file": "20260916-175545-final-mlx.json",
+      "protocol": {
+        "request": {
+          "prompt": "a small cozy cabin beside a lake, mountains in the background, golden morning light, landscape photography",
+          "negative_prompt": "",
+          "seed": 12345,
+          "width": 512,
+          "height": 512,
+          "steps": 20,
+          "cfg": 7
+        },
+        "model": "<project>/models/sd15",
+        "sampler": "DPM++ 2M",
+        "schedule": "Karras rho=7",
+        "rng": "NumPy PCG64 float32 NCHW shared bytes",
+        "precision": "UNet+CLIP fp16; VAE+latents fp32"
+      },
+      "model_load_time": 0.27999799999997776,
+      "backend": "mlx",
+      "quantize": 0,
+      "timing_schema": "generation-wall-v2",
+      "cold": {
+        "n": 1,
+        "stages": {
+          "prepare_time": {
+            "median": 0.40842595800131676,
+            "min": 0.40842595800131676,
+            "max": 0.40842595800131676,
+            "n": 1
+          },
+          "text_encoder_time": {
+            "median": 0.012925667000672547,
+            "min": 0.012925667000672547,
+            "max": 0.012925667000672547,
+            "n": 1
+          },
+          "diffusion_time": {
+            "median": 7.28049375000046,
+            "min": 7.28049375000046,
+            "max": 7.28049375000046,
+            "n": 1
+          },
+          "vae_time": {
+            "median": 0.7178182919997198,
+            "min": 0.7178182919997198,
+            "max": 0.7178182919997198,
+            "n": 1
+          },
+          "readback_time": {
+            "median": 0.0004892920005659107,
+            "min": 0.0004892920005659107,
+            "max": 0.0004892920005659107,
+            "n": 1
+          },
+          "latent_init_time": {
+            "median": 0.0007633749992237426,
+            "min": 0.0007633749992237426,
+            "max": 0.0007633749992237426,
+            "n": 1
+          },
+          "postprocess_time": {
+            "median": 0.0007767080005578464,
+            "min": 0.0007767080005578464,
+            "max": 0.0007767080005578464,
+            "n": 1
+          },
+          "diagnostic_time": {
+            "median": 0.005581499999607331,
+            "min": 0.005581499999607331,
+            "max": 0.005581499999607331,
+            "n": 1
+          },
+          "stage_sum_time": {
+            "median": 8.421693042002516,
+            "min": 8.421693042002516,
+            "max": 8.421693042002516,
+            "n": 1
+          },
+          "total_time": {
+            "median": 8.421733833001781,
+            "min": 8.421733833001781,
+            "max": 8.421733833001781,
+            "n": 1
+          },
+          "wall_time": {
+            "median": 8.427315333001388,
+            "min": 8.427315333001388,
+            "max": 8.427315333001388,
+            "n": 1
+          },
+          "seconds_per_step": {
+            "median": 0.364024687500023,
+            "min": 0.364024687500023,
+            "max": 0.364024687500023,
+            "n": 1
+          },
+          "png_time": {
+            "median": 0.019468333000986604,
+            "min": 0.019468333000986604,
+            "max": 0.019468333000986604,
+            "n": 1
+          }
+        }
+      },
+      "warm": {
+        "n": 10,
+        "stages": {
+          "prepare_time": {
+            "median": 0.03099139600089984,
+            "min": 0.028130916000009165,
+            "max": 0.042157542000495596,
+            "n": 10
+          },
+          "text_encoder_time": {
+            "median": 0.00975072899927909,
+            "min": 0.007165290999182616,
+            "max": 0.014539959000103408,
+            "n": 10
+          },
+          "diffusion_time": {
+            "median": 10.11765010399995,
+            "min": 7.792747084000439,
+            "max": 11.232763374999195,
+            "n": 10
+          },
+          "vae_time": {
+            "median": 0.7194855415000347,
+            "min": 0.6926875839999411,
+            "max": 0.7541784160002862,
+            "n": 10
+          },
+          "readback_time": {
+            "median": 0.000479729500511894,
+            "min": 0.0003796660002990393,
+            "max": 0.0005447080002340954,
+            "n": 10
+          },
+          "latent_init_time": {
+            "median": 0.0005061045003458275,
+            "min": 0.0004151249995629769,
+            "max": 0.0008567089989810484,
+            "n": 10
+          },
+          "postprocess_time": {
+            "median": 0.0010016460009865114,
+            "min": 0.0008072079999692505,
+            "max": 0.0011343750011292286,
+            "n": 10
+          },
+          "diagnostic_time": {
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 10
+          },
+          "stage_sum_time": {
+            "median": 10.879357395500847,
+            "min": 8.528087624999898,
+            "max": 12.04563208399668,
+            "n": 10
+          },
+          "total_time": {
+            "median": 10.879398250000122,
+            "min": 8.528119791999416,
+            "max": 12.04570962499929,
+            "n": 10
+          },
+          "wall_time": {
+            "median": 10.879398250000122,
+            "min": 8.528119791999416,
+            "max": 12.04570962499929,
+            "n": 10
+          },
+          "seconds_per_step": {
+            "median": 0.5058825051999974,
+            "min": 0.38963735420002193,
+            "max": 0.5616381687499598,
+            "n": 10
+          },
+          "png_time": {
+            "median": 0.019532499999513675,
+            "min": 0.014630665998993209,
+            "max": 0.020453791999898385,
+            "n": 10
+          }
+        }
+      },
+      "environment": {
+        "before": {
+          "system_memory_used_mb": 9166.6875,
+          "system_memory_available_mb": 13658.390625,
+          "swap_mb": 8795.1875,
+          "temperature_c": null,
+          "power_w": null,
+          "gpu_utilization_percent": 10.0,
+          "gpu_frequency_mhz": null,
+          "thermal_state": 1,
+          "memory_pressure_raw": "The system has 25769803776 (1572864 pages with a page size of 16384).\nSystem-wide memory free percentage: 85%"
+        },
+        "after": {
+          "system_memory_used_mb": 14799.0625,
+          "system_memory_available_mb": 7736.515625,
+          "swap_mb": 8795.1875,
+          "temperature_c": null,
+          "power_w": null,
+          "gpu_utilization_percent": 100.0,
+          "gpu_frequency_mhz": null,
+          "thermal_state": 1,
+          "memory_pressure_raw": "The system has 25769803776 (1572864 pages with a page size of 16384).\nSystem-wide memory free percentage: 59%"
+        }
+      }
+    },
+    {
+      "file": "20260916-175754-sustained-mps.json",
+      "protocol": {
+        "request": {
+          "prompt": "a small cozy cabin beside a lake, mountains in the background, golden morning light, landscape photography",
+          "negative_prompt": "",
+          "seed": 12345,
+          "width": 512,
+          "height": 512,
+          "steps": 20,
+          "cfg": 7
+        },
+        "model": "<project>/models/sd15",
+        "sampler": "DPM++ 2M",
+        "schedule": "Karras rho=7",
+        "rng": "NumPy PCG64 float32 NCHW shared bytes",
+        "precision": "UNet+CLIP fp16; VAE+latents fp32"
+      },
+      "model_load_time": 1.210994416000176,
+      "backend": "mps",
+      "quantize": 0,
+      "timing_schema": "generation-wall-v2",
+      "cold": {
+        "n": 1,
+        "stages": {
+          "prepare_time": {
+            "median": 0.05553212500126392,
+            "min": 0.05553212500126392,
+            "max": 0.05553212500126392,
+            "n": 1
+          },
+          "text_encoder_time": {
+            "median": 0.06127600000036182,
+            "min": 0.06127600000036182,
+            "max": 0.06127600000036182,
+            "n": 1
+          },
+          "diffusion_time": {
+            "median": 11.069302167001297,
+            "min": 11.069302167001297,
+            "max": 11.069302167001297,
+            "n": 1
+          },
+          "vae_time": {
+            "median": 1.2431680829995457,
+            "min": 1.2431680829995457,
+            "max": 1.2431680829995457,
+            "n": 1
+          },
+          "readback_time": {
+            "median": 0.0004304169997340068,
+            "min": 0.0004304169997340068,
+            "max": 0.0004304169997340068,
+            "n": 1
+          },
+          "latent_init_time": {
+            "median": 0.000956374999077525,
+            "min": 0.000956374999077525,
+            "max": 0.000956374999077525,
+            "n": 1
+          },
+          "postprocess_time": {
+            "median": 0.001031124998917221,
+            "min": 0.001031124998917221,
+            "max": 0.001031124998917221,
+            "n": 1
+          },
+          "diagnostic_time": {
+            "median": 0.01123554200057697,
+            "min": 0.01123554200057697,
+            "max": 0.01123554200057697,
+            "n": 1
+          },
+          "stage_sum_time": {
+            "median": 12.431696292000197,
+            "min": 12.431696292000197,
+            "max": 12.431696292000197,
+            "n": 1
+          },
+          "total_time": {
+            "median": 12.431798124000125,
+            "min": 12.431798124000125,
+            "max": 12.431798124000125,
+            "n": 1
+          },
+          "wall_time": {
+            "median": 12.443033666000701,
+            "min": 12.443033666000701,
+            "max": 12.443033666000701,
+            "n": 1
+          },
+          "seconds_per_step": {
+            "median": 0.5534651083500648,
+            "min": 0.5534651083500648,
+            "max": 0.5534651083500648,
+            "n": 1
+          },
+          "png_time": {
+            "median": 0.02115208299983351,
+            "min": 0.02115208299983351,
+            "max": 0.02115208299983351,
+            "n": 1
+          }
+        }
+      },
+      "warm": {
+        "n": 10,
+        "stages": {
+          "prepare_time": {
+            "median": 0.03260754149960121,
+            "min": 0.025860375000775093,
+            "max": 0.04951329200048349,
+            "n": 10
+          },
+          "text_encoder_time": {
+            "median": 0.016969937000794744,
+            "min": 0.01483416699920781,
+            "max": 0.028746833999321098,
+            "n": 10
+          },
+          "diffusion_time": {
+            "median": 12.012407770999744,
+            "min": 10.930692042000373,
+            "max": 16.711354167000536,
+            "n": 10
+          },
+          "vae_time": {
+            "median": 1.479317583000011,
+            "min": 1.2777130829999805,
+            "max": 2.064464125000086,
+            "n": 10
+          },
+          "readback_time": {
+            "median": 0.014603083000110928,
+            "min": 0.0005543749994103564,
+            "max": 0.03484379200017429,
+            "n": 10
+          },
+          "latent_init_time": {
+            "median": 0.000683562499943946,
+            "min": 0.00044620900007430464,
+            "max": 0.0015217500003927853,
+            "n": 10
+          },
+          "postprocess_time": {
+            "median": 0.0030443750001722947,
+            "min": 0.0008506670001224848,
+            "max": 0.009259999998903368,
+            "n": 10
+          },
+          "diagnostic_time": {
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 10
+          },
+          "stage_sum_time": {
+            "median": 13.489985457999865,
+            "min": 12.337237626999922,
+            "max": 18.85743287600053,
+            "n": 10
+          },
+          "total_time": {
+            "median": 13.490202937499816,
+            "min": 12.337623167000856,
+            "max": 18.857764207999935,
+            "n": 10
+          },
+          "wall_time": {
+            "median": 13.490202937499816,
+            "min": 12.337623167000856,
+            "max": 18.857764207999935,
+            "n": 10
+          },
+          "seconds_per_step": {
+            "median": 0.6006203885499872,
+            "min": 0.5465346021000187,
+            "max": 0.8355677083500268,
+            "n": 10
+          },
+          "png_time": {
+            "median": 0.019193812499906926,
+            "min": 0.014739833000930957,
+            "max": 0.032331917000192334,
+            "n": 10
+          }
+        }
+      },
+      "environment": {
+        "before": {
+          "system_memory_used_mb": 8299.8125,
+          "system_memory_available_mb": 14232.03125,
+          "swap_mb": 8795.1875,
+          "temperature_c": null,
+          "power_w": null,
+          "gpu_utilization_percent": 0.0,
+          "gpu_frequency_mhz": null,
+          "thermal_state": 1,
+          "memory_pressure_raw": "The system has 25769803776 (1572864 pages with a page size of 16384).\nSystem-wide memory free percentage: 83%"
+        },
+        "after": {
+          "system_memory_used_mb": 14161.015625,
+          "system_memory_available_mb": 8368.1875,
+          "swap_mb": 8739.1875,
+          "temperature_c": null,
+          "power_w": null,
+          "gpu_utilization_percent": 30.0,
+          "gpu_frequency_mhz": null,
+          "thermal_state": 1,
+          "memory_pressure_raw": "The system has 25769803776 (1572864 pages with a page size of 16384).\nSystem-wide memory free percentage: 67%"
+        }
+      }
+    },
+    {
+      "file": "20260916-180048-reverse-mlx.json",
+      "protocol": {
+        "request": {
+          "prompt": "a small cozy cabin beside a lake, mountains in the background, golden morning light, landscape photography",
+          "negative_prompt": "",
+          "seed": 12345,
+          "width": 512,
+          "height": 512,
+          "steps": 20,
+          "cfg": 7
+        },
+        "model": "<project>/models/sd15",
+        "sampler": "DPM++ 2M",
+        "schedule": "Karras rho=7",
+        "rng": "NumPy PCG64 float32 NCHW shared bytes",
+        "precision": "UNet+CLIP fp16; VAE+latents fp32"
+      },
+      "model_load_time": 0.24585541600026772,
+      "backend": "mlx",
+      "quantize": 0,
+      "timing_schema": "generation-wall-v2",
+      "cold": {
+        "n": 1,
+        "stages": {
+          "prepare_time": {
+            "median": 0.4198795410011371,
+            "min": 0.4198795410011371,
+            "max": 0.4198795410011371,
+            "n": 1
+          },
+          "text_encoder_time": {
+            "median": 0.011726958000508603,
+            "min": 0.011726958000508603,
+            "max": 0.011726958000508603,
+            "n": 1
+          },
+          "diffusion_time": {
+            "median": 13.07883404200038,
+            "min": 13.07883404200038,
+            "max": 13.07883404200038,
+            "n": 1
+          },
+          "vae_time": {
+            "median": 0.8715700829998241,
+            "min": 0.8715700829998241,
+            "max": 0.8715700829998241,
+            "n": 1
+          },
+          "readback_time": {
+            "median": 0.000570958000025712,
+            "min": 0.000570958000025712,
+            "max": 0.000570958000025712,
+            "n": 1
+          },
+          "latent_init_time": {
+            "median": 0.000659834000543924,
+            "min": 0.000659834000543924,
+            "max": 0.000659834000543924,
+            "n": 1
+          },
+          "postprocess_time": {
+            "median": 0.0013040829999226844,
+            "min": 0.0013040829999226844,
+            "max": 0.0013040829999226844,
+            "n": 1
+          },
+          "diagnostic_time": {
+            "median": 0.005133166998348315,
+            "min": 0.005133166998348315,
+            "max": 0.005133166998348315,
+            "n": 1
+          },
+          "stage_sum_time": {
+            "median": 14.384545499002343,
+            "min": 14.384545499002343,
+            "max": 14.384545499002343,
+            "n": 1
+          },
+          "total_time": {
+            "median": 14.384603833002984,
+            "min": 14.384603833002984,
+            "max": 14.384603833002984,
+            "n": 1
+          },
+          "wall_time": {
+            "median": 14.389737000001332,
+            "min": 14.389737000001332,
+            "max": 14.389737000001332,
+            "n": 1
+          },
+          "seconds_per_step": {
+            "median": 0.653941702100019,
+            "min": 0.653941702100019,
+            "max": 0.653941702100019,
+            "n": 1
+          },
+          "png_time": {
+            "median": 0.029818375000104425,
+            "min": 0.029818375000104425,
+            "max": 0.029818375000104425,
+            "n": 1
+          }
+        }
+      },
+      "warm": {
+        "n": 3,
+        "stages": {
+          "prepare_time": {
+            "median": 0.032639999999446445,
+            "min": 0.030346833000294282,
+            "max": 0.03668724999988626,
+            "n": 3
+          },
+          "text_encoder_time": {
+            "median": 0.013759916000708472,
+            "min": 0.011909707998711383,
+            "max": 0.018320375000257627,
+            "n": 3
+          },
+          "diffusion_time": {
+            "median": 13.839648292001584,
+            "min": 13.100046958999883,
+            "max": 13.902730583000448,
+            "n": 3
+          },
+          "vae_time": {
+            "median": 0.9253619169994636,
+            "min": 0.9005987089985865,
+            "max": 1.0082933339999727,
+            "n": 3
+          },
+          "readback_time": {
+            "median": 0.0005180829994060332,
+            "min": 0.0004714999995485414,
+            "max": 0.0005512080006155884,
+            "n": 3
+          },
+          "latent_init_time": {
+            "median": 0.0005869579999853158,
+            "min": 0.000465375000203494,
+            "max": 0.0007586250012536766,
+            "n": 3
+          },
+          "postprocess_time": {
+            "median": 0.0011224170011701062,
+            "min": 0.0009802910008147592,
+            "max": 0.0011581250000745058,
+            "n": 3
+          },
+          "diagnostic_time": {
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3
+          },
+          "stage_sum_time": {
+            "median": 14.818227583002226,
+            "min": 14.152691833998688,
+            "max": 14.8560370410014,
+            "n": 3
+          },
+          "total_time": {
+            "median": 14.818281709000075,
+            "min": 14.152758124999309,
+            "max": 14.856106624998574,
+            "n": 3
+          },
+          "wall_time": {
+            "median": 14.818281709000075,
+            "min": 14.152758124999309,
+            "max": 14.856106624998574,
+            "n": 3
+          },
+          "seconds_per_step": {
+            "median": 0.6919824146000793,
+            "min": 0.6550023479499941,
+            "max": 0.6951365291500224,
+            "n": 3
+          },
+          "png_time": {
+            "median": 0.017696999999316176,
+            "min": 0.01604395800131897,
+            "max": 0.019295207999675767,
+            "n": 3
+          }
+        }
+      },
+      "environment": {
+        "before": {
+          "system_memory_used_mb": 9259.6875,
+          "system_memory_available_mb": 13270.921875,
+          "swap_mb": 8739.1875,
+          "temperature_c": null,
+          "power_w": null,
+          "gpu_utilization_percent": 51.0,
+          "gpu_frequency_mhz": null,
+          "thermal_state": 1,
+          "memory_pressure_raw": "The system has 25769803776 (1572864 pages with a page size of 16384).\nSystem-wide memory free percentage: 82%"
+        },
+        "after": {
+          "system_memory_used_mb": 13784.203125,
+          "system_memory_available_mb": 8743.3125,
+          "swap_mb": 8739.1875,
+          "temperature_c": null,
+          "power_w": null,
+          "gpu_utilization_percent": 88.0,
+          "gpu_frequency_mhz": null,
+          "thermal_state": 1,
+          "memory_pressure_raw": "The system has 25769803776 (1572864 pages with a page size of 16384).\nSystem-wide memory free percentage: 66%"
+        }
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "baseline": "20260916-175754-sustained-mps.json",
+      "candidate": "20260916-174219-mlx-naive.json",
+      "protocol_mismatches": [],
+      "eligible_for_matched_speedup": true,
+      "timing_schema_match": false,
+      "diffusion_time_warm_speedup": 1.3258684504062161,
+      "confidence": "Descriptive only; no confidence interval. Repeated runs share one process; independent sessions and varied execution order are needed.",
+      "warm_sample_counts": [
+        10,
+        1
+      ]
+    },
+    {
+      "baseline": "20260916-175754-sustained-mps.json",
+      "candidate": "20260916-174334-mps-matched.json",
+      "protocol_mismatches": [],
+      "eligible_for_matched_speedup": true,
+      "timing_schema_match": false,
+      "diffusion_time_warm_speedup": 0.9496700256610601,
+      "confidence": "Descriptive only; no confidence interval. Repeated runs share one process; independent sessions and varied execution order are needed.",
+      "warm_sample_counts": [
+        10,
+        1
+      ]
+    },
+    {
+      "baseline": "20260916-175754-sustained-mps.json",
+      "candidate": "20260916-174419-mlx-bounded.json",
+      "protocol_mismatches": [],
+      "eligible_for_matched_speedup": true,
+      "timing_schema_match": false,
+      "diffusion_time_warm_speedup": 0.6011175390536745,
+      "confidence": "Descriptive only; no confidence interval. Repeated runs share one process; independent sessions and varied execution order are needed.",
+      "warm_sample_counts": [
+        10,
+        1
+      ]
+    },
+    {
+      "baseline": "20260916-175754-sustained-mps.json",
+      "candidate": "20260916-174505-mlx-compiled.json",
+      "protocol_mismatches": [],
+      "eligible_for_matched_speedup": true,
+      "timing_schema_match": false,
+      "diffusion_time_warm_speedup": 0.6049159674131549,
+      "confidence": "Descriptive only; no confidence interval. Repeated runs share one process; independent sessions and varied execution order are needed.",
+      "warm_sample_counts": [
+        10,
+        2
+      ]
+    },
+    {
+      "baseline": "20260916-175754-sustained-mps.json",
+      "candidate": "20260916-174919-mlx-padded.json",
+      "protocol_mismatches": [],
+      "eligible_for_matched_speedup": true,
+      "timing_schema_match": false,
+      "diffusion_time_warm_speedup": 1.2602422527639507,
+      "confidence": "Descriptive only; no confidence interval. Repeated runs share one process; independent sessions and varied execution order are needed.",
+      "warm_sample_counts": [
+        10,
+        2
+      ]
+    },
+    {
+      "baseline": "20260916-175754-sustained-mps.json",
+      "candidate": "20260916-175409-padded-compile.json",
+      "protocol_mismatches": [],
+      "eligible_for_matched_speedup": true,
+      "timing_schema_match": false,
+      "diffusion_time_warm_speedup": 1.6371123121840825,
+      "confidence": "Descriptive only; no confidence interval. Repeated runs share one process; independent sessions and varied execution order are needed.",
+      "warm_sample_counts": [
+        10,
+        2
+      ]
+    },
+    {
+      "baseline": "20260916-175754-sustained-mps.json",
+      "candidate": "20260916-175455-final-mps.json",
+      "protocol_mismatches": [],
+      "eligible_for_matched_speedup": true,
+      "timing_schema_match": true,
+      "total_time_warm_speedup": 1.4722327667929898,
+      "diffusion_time_warm_speedup": 1.46425330527249,
+      "wall_time_warm_speedup": 1.4722327667929898,
+      "confidence": "Descriptive only; no confidence interval. Repeated runs share one process; independent sessions and varied execution order are needed.",
+      "warm_sample_counts": [
+        10,
+        3
+      ]
+    },
+    {
+      "baseline": "20260916-175754-sustained-mps.json",
+      "candidate": "20260916-175545-final-mlx.json",
+      "protocol_mismatches": [],
+      "eligible_for_matched_speedup": true,
+      "timing_schema_match": true,
+      "total_time_warm_speedup": 1.2399769387520734,
+      "diffusion_time_warm_speedup": 1.1872725037457772,
+      "wall_time_warm_speedup": 1.2399769387520734,
+      "confidence": "Descriptive only; no confidence interval. Repeated runs share one process; independent sessions and varied execution order are needed.",
+      "warm_sample_counts": [
+        10,
+        10
+      ]
+    },
+    {
+      "baseline": "20260916-175754-sustained-mps.json",
+      "candidate": "20260916-180048-reverse-mlx.json",
+      "protocol_mismatches": [],
+      "eligible_for_matched_speedup": true,
+      "timing_schema_match": true,
+      "total_time_warm_speedup": 0.910375656396542,
+      "diffusion_time_warm_speedup": 0.8679705956069804,
+      "wall_time_warm_speedup": 0.910375656396542,
+      "confidence": "Descriptive only; no confidence interval. Repeated runs share one process; independent sessions and varied execution order are needed.",
+      "warm_sample_counts": [
+        10,
+        3
+      ]
+    }
+  ],
+  "quality": [
+    {
+      "file": "quality-compiled.json",
+      "a": "benchmark/results/20260916-174334-mps-matched-0.png",
+      "b": "benchmark/results/20260916-175409-padded-compile-0.png",
+      "psnr": 50.351106344984956,
+      "ssim": 0.9983899593353271,
+      "pixel_mae": 0.0015021831495687366,
+      "pixel_max_abs": 0.07450979948043823,
+      "conditioning": {
+        "rmse": 0.0017755923327058554,
+        "max_abs": 0.021484375,
+        "relative_l2": 0.0017216509440913796
+      },
+      "latent": {
+        "rmse": 0.005519999656826258,
+        "max_abs": 0.08044221997261047,
+        "relative_l2": 0.006165532395243645
+      }
+    },
+    {
+      "file": "quality-final.json",
+      "a": "benchmark/results/20260916-175455-final-mps-0.png",
+      "b": "benchmark/results/20260916-175545-final-mlx-0.png",
+      "psnr": 50.351106344984956,
+      "ssim": 0.9983899593353271,
+      "pixel_mae": 0.0015021831495687366,
+      "pixel_max_abs": 0.07450979948043823,
+      "conditioning": {
+        "rmse": 0.0017755923327058554,
+        "max_abs": 0.021484375,
+        "relative_l2": 0.0017216509440913796
+      },
+      "latent": {
+        "rmse": 0.005519999656826258,
+        "max_abs": 0.08044221997261047,
+        "relative_l2": 0.006165532395243645
+      }
+    },
+    {
+      "file": "quality-mlx-padded.json",
+      "a": "benchmark/results/20260916-174219-mlx-naive-0.png",
+      "b": "benchmark/results/20260916-174919-mlx-padded-0.png",
+      "psnr": 49.38203198339713,
+      "ssim": 0.9984410405158997,
+      "pixel_mae": 0.0014982634456828237,
+      "pixel_max_abs": 0.0941176563501358,
+      "conditioning": {
+        "rmse": 0.0,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "latent": {
+        "rmse": 0.0065582990646362305,
+        "max_abs": 0.10085704922676086,
+        "relative_l2": 0.007327334024012089
+      }
+    },
+    {
+      "file": "quality-mps-mlx.json",
+      "a": "benchmark/results/20260916-174334-mps-matched-0.png",
+      "b": "benchmark/results/20260916-174219-mlx-naive-0.png",
+      "psnr": 51.142738307836886,
+      "ssim": 0.9984796643257141,
+      "pixel_mae": 0.0013696210226044059,
+      "pixel_max_abs": 0.07843136787414551,
+      "conditioning": {
+        "rmse": 0.0017755923327058554,
+        "max_abs": 0.021484375,
+        "relative_l2": 0.0017216509440913796
+      },
+      "latent": {
+        "rmse": 0.005003985483199358,
+        "max_abs": 0.05679762363433838,
+        "relative_l2": 0.005589173641055822
+      }
+    },
+    {
+      "file": "quality-mps-padded.json",
+      "a": "benchmark/results/20260916-174334-mps-matched-0.png",
+      "b": "benchmark/results/20260916-174919-mlx-padded-0.png",
+      "psnr": 50.351106344984956,
+      "ssim": 0.9983899593353271,
+      "pixel_mae": 0.0015021831495687366,
+      "pixel_max_abs": 0.07450979948043823,
+      "conditioning": {
+        "rmse": 0.0017755923327058554,
+        "max_abs": 0.021484375,
+        "relative_l2": 0.0017216509440913796
+      },
+      "latent": {
+        "rmse": 0.005519999656826258,
+        "max_abs": 0.08044221997261047,
+        "relative_l2": 0.006165532395243645
+      }
+    }
+  ],
+  "caveats": [
+    "Timing schema v2 total_time is full generation wall time minus measured .npy diagnostics; wall_time includes diagnostics; stage_sum_time is the component sum. Cross-schema total/wall speedups are suppressed, diffusion remains comparable.",
+    "cold means first generation after model load, not a cleared OS cache or cold machine.",
+    "total_time in legacy results is the sum of named stage timers; it excludes model load, PNG, latent initialization, intermediate saves and postprocessing. Use wall_time where present for generation latency.",
+    "A single warm sample is not a stable estimate. Medians here describe only available samples.",
+    "The MPS comparator uses the same weights and custom pipeline, not end-to-end AUTOMATIC1111 UI timing.",
+    "buffer_reuse stores immutable schedule metadata; physical activation allocation/reuse belongs to the MLX allocator.",
+    "SSIM and PSNR are pixel similarity evidence for the compared images, not human preference or dataset-wide quality. Quantized variants require separate quality comparisons.",
+    "RSS and backend allocation are overlapping views of unified memory; do not sum them. Thermal, swap and other activity can confound sequential runs.",
+    "Matching model paths is not a weight checksum. Preserve model provenance and checkpoints separately."
+  ]
+}

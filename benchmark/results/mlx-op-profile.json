@@ -1,0 +1,4601 @@
+{
+  "note": "Instrumented single UNet step; per-op synchronization adds overhead. MHA includes nested Linear time. Diagnostic only, not generation benchmark.",
+  "top10": [
+    {
+      "name": "up_blocks.3.attentions.2.transformer_blocks.0.attn1",
+      "type": "MultiHeadAttention",
+      "ms": 33.24199999951816,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.1.transformer_blocks.0.attn1",
+      "type": "MultiHeadAttention",
+      "ms": 33.06733299905318,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.0.transformer_blocks.0.attn1",
+      "type": "MultiHeadAttention",
+      "ms": 32.53316700102005,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.1.transformer_blocks.0.attn1.out_proj",
+      "type": "Linear",
+      "ms": 31.088957999600098,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.0.transformer_blocks.0.attn1",
+      "type": "MultiHeadAttention",
+      "ms": 30.4763339991041,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.1.transformer_blocks.0.attn1",
+      "type": "MultiHeadAttention",
+      "ms": 30.436667000685702,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.2.transformer_blocks.0.attn1.out_proj",
+      "type": "Linear",
+      "ms": 30.31537500100967,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.1.upsample",
+      "type": "Conv2d",
+      "ms": 29.847374999008025,
+      "shape": [
+        2,
+        32,
+        32,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.0.transformer_blocks.0.attn1.out_proj",
+      "type": "Linear",
+      "ms": 29.567333000159124,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.0.transformer_blocks.0.attn1.out_proj",
+      "type": "Linear",
+      "ms": 28.81912499833561,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    }
+  ],
+  "all": [
+    {
+      "name": "up_blocks.3.attentions.2.transformer_blocks.0.attn1",
+      "type": "MultiHeadAttention",
+      "ms": 33.24199999951816,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.1.transformer_blocks.0.attn1",
+      "type": "MultiHeadAttention",
+      "ms": 33.06733299905318,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.0.transformer_blocks.0.attn1",
+      "type": "MultiHeadAttention",
+      "ms": 32.53316700102005,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.1.transformer_blocks.0.attn1.out_proj",
+      "type": "Linear",
+      "ms": 31.088957999600098,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.0.transformer_blocks.0.attn1",
+      "type": "MultiHeadAttention",
+      "ms": 30.4763339991041,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.1.transformer_blocks.0.attn1",
+      "type": "MultiHeadAttention",
+      "ms": 30.436667000685702,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.2.transformer_blocks.0.attn1.out_proj",
+      "type": "Linear",
+      "ms": 30.31537500100967,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.1.upsample",
+      "type": "Conv2d",
+      "ms": 29.847374999008025,
+      "shape": [
+        2,
+        32,
+        32,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.0.transformer_blocks.0.attn1.out_proj",
+      "type": "Linear",
+      "ms": 29.567333000159124,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.0.transformer_blocks.0.attn1.out_proj",
+      "type": "Linear",
+      "ms": 28.81912499833561,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.1.transformer_blocks.0.attn1.out_proj",
+      "type": "Linear",
+      "ms": 28.73445899967919,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.2.resnets.0.conv1",
+      "type": "Conv2d",
+      "ms": 22.862499999973807,
+      "shape": [
+        2,
+        32,
+        32,
+        1920
+      ]
+    },
+    {
+      "name": "up_blocks.1.resnets.0.conv1",
+      "type": "Conv2d",
+      "ms": 16.304292001223075,
+      "shape": [
+        2,
+        16,
+        16,
+        2560
+      ]
+    },
+    {
+      "name": "up_blocks.1.resnets.1.conv1",
+      "type": "Conv2d",
+      "ms": 16.068083999925875,
+      "shape": [
+        2,
+        16,
+        16,
+        2560
+      ]
+    },
+    {
+      "name": "up_blocks.2.resnets.1.conv1",
+      "type": "Conv2d",
+      "ms": 16.064125000411877,
+      "shape": [
+        2,
+        32,
+        32,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.1.resnets.2.conv1",
+      "type": "Conv2d",
+      "ms": 12.965500000063912,
+      "shape": [
+        2,
+        16,
+        16,
+        1920
+      ]
+    },
+    {
+      "name": "up_blocks.2.resnets.2.conv2",
+      "type": "Conv2d",
+      "ms": 9.952625001460547,
+      "shape": [
+        2,
+        32,
+        32,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.2.resnets.0.conv2",
+      "type": "Conv2d",
+      "ms": 9.911666998959845,
+      "shape": [
+        2,
+        32,
+        32,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.2.resnets.1.conv2",
+      "type": "Conv2d",
+      "ms": 9.848208999756025,
+      "shape": [
+        2,
+        32,
+        32,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.2.resnets.2.conv1",
+      "type": "Conv2d",
+      "ms": 9.809958999539958,
+      "shape": [
+        2,
+        32,
+        32,
+        960
+      ]
+    },
+    {
+      "name": "up_blocks.3.resnets.0.conv1",
+      "type": "Conv2d",
+      "ms": 9.409207999851787,
+      "shape": [
+        2,
+        64,
+        64,
+        960
+      ]
+    },
+    {
+      "name": "down_blocks.1.resnets.0.conv2",
+      "type": "Conv2d",
+      "ms": 9.236167001290596,
+      "shape": [
+        2,
+        32,
+        32,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.1.resnets.1.conv2",
+      "type": "Conv2d",
+      "ms": 8.227207999880193,
+      "shape": [
+        2,
+        32,
+        32,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.2.resnets.1.conv1",
+      "type": "Conv2d",
+      "ms": 8.084042001428315,
+      "shape": [
+        2,
+        16,
+        16,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.1.resnets.2.conv2",
+      "type": "Conv2d",
+      "ms": 6.637542001044494,
+      "shape": [
+        2,
+        16,
+        16,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.0.upsample",
+      "type": "Conv2d",
+      "ms": 6.556459000421455,
+      "shape": [
+        2,
+        16,
+        16,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.1.resnets.0.conv2",
+      "type": "Conv2d",
+      "ms": 6.462290999479592,
+      "shape": [
+        2,
+        16,
+        16,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.1.resnets.1.conv2",
+      "type": "Conv2d",
+      "ms": 6.452833000366809,
+      "shape": [
+        2,
+        16,
+        16,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.2.resnets.0.conv2",
+      "type": "Conv2d",
+      "ms": 6.366542000250774,
+      "shape": [
+        2,
+        16,
+        16,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.2.resnets.1.conv2",
+      "type": "Conv2d",
+      "ms": 6.31158400028653,
+      "shape": [
+        2,
+        16,
+        16,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.2.upsample",
+      "type": "Conv2d",
+      "ms": 6.206666001162375,
+      "shape": [
+        2,
+        64,
+        64,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.0.transformer_blocks.0.linear3",
+      "type": "Linear",
+      "ms": 6.022875000780914,
+      "shape": [
+        2,
+        4096,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.1.resnets.1.conv1",
+      "type": "Conv2d",
+      "ms": 5.774125000243657,
+      "shape": [
+        2,
+        32,
+        32,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.0.transformer_blocks.0.attn2",
+      "type": "MultiHeadAttention",
+      "ms": 5.653791999066016,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.1.transformer_blocks.0.linear3",
+      "type": "Linear",
+      "ms": 5.344750001313514,
+      "shape": [
+        2,
+        4096,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.0.transformer_blocks.0.attn1",
+      "type": "MultiHeadAttention",
+      "ms": 5.24470799973642,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.0.resnets.0.conv1",
+      "type": "Conv2d",
+      "ms": 5.124457999045262,
+      "shape": [
+        2,
+        64,
+        64,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.1.transformer_blocks.0.attn1",
+      "type": "MultiHeadAttention",
+      "ms": 5.076834000647068,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.2.transformer_blocks.0.attn1",
+      "type": "MultiHeadAttention",
+      "ms": 4.749125000671484,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.3.resnets.1.norm2",
+      "type": "GroupNorm",
+      "ms": 4.645375000109198,
+      "shape": [
+        2,
+        64,
+        64,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.0.transformer_blocks.0.attn1",
+      "type": "MultiHeadAttention",
+      "ms": 4.579332999128383,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.1.transformer_blocks.0.linear3",
+      "type": "Linear",
+      "ms": 4.426208000950282,
+      "shape": [
+        2,
+        4096,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.2.transformer_blocks.0.attn1",
+      "type": "MultiHeadAttention",
+      "ms": 4.3323339996277355,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.1.transformer_blocks.0.linear3",
+      "type": "Linear",
+      "ms": 4.154334001214011,
+      "shape": [
+        2,
+        256,
+        5120
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.1.transformer_blocks.0.attn1",
+      "type": "MultiHeadAttention",
+      "ms": 4.034333000163315,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.0.transformer_blocks.0.attn1.out_proj",
+      "type": "Linear",
+      "ms": 3.9809169993532123,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.0.transformer_blocks.0.attn1",
+      "type": "MultiHeadAttention",
+      "ms": 3.890750000209664,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.1.transformer_blocks.0.attn1",
+      "type": "MultiHeadAttention",
+      "ms": 3.8569170010305243,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.0.resnets.2.norm1",
+      "type": "GroupNorm",
+      "ms": 3.802957999141654,
+      "shape": [
+        2,
+        8,
+        8,
+        2560
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.2.transformer_blocks.0.norm2",
+      "type": "LayerNorm",
+      "ms": 3.7401250010589138,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.0.transformer_blocks.0.linear3",
+      "type": "Linear",
+      "ms": 3.723875001014676,
+      "shape": [
+        2,
+        256,
+        5120
+      ]
+    },
+    {
+      "name": "up_blocks.0.resnets.2.conv1",
+      "type": "Conv2d",
+      "ms": 3.5879169990948867,
+      "shape": [
+        2,
+        8,
+        8,
+        2560
+      ]
+    },
+    {
+      "name": "up_blocks.0.resnets.1.conv1",
+      "type": "Conv2d",
+      "ms": 3.4562919991003582,
+      "shape": [
+        2,
+        8,
+        8,
+        2560
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.0.transformer_blocks.0.norm2",
+      "type": "LayerNorm",
+      "ms": 3.3432919990445953,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.2.resnets.0.conv1",
+      "type": "Conv2d",
+      "ms": 3.33758299893816,
+      "shape": [
+        2,
+        16,
+        16,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.0.resnets.0.conv1",
+      "type": "Conv2d",
+      "ms": 3.335332999995444,
+      "shape": [
+        2,
+        8,
+        8,
+        2560
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.2.transformer_blocks.0.attn2",
+      "type": "MultiHeadAttention",
+      "ms": 3.3334159998048563,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.1.transformer_blocks.0.attn1.out_proj",
+      "type": "Linear",
+      "ms": 3.265250001277309,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.0.transformer_blocks.0.attn1.out_proj",
+      "type": "Linear",
+      "ms": 3.1777079984749435,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.1.resnets.0.norm1",
+      "type": "GroupNorm",
+      "ms": 3.131375000521075,
+      "shape": [
+        2,
+        16,
+        16,
+        2560
+      ]
+    },
+    {
+      "name": "down_blocks.1.resnets.0.conv1",
+      "type": "Conv2d",
+      "ms": 3.0266250014392426,
+      "shape": [
+        2,
+        32,
+        32,
+        320
+      ]
+    },
+    {
+      "name": "mid_blocks.0.norm2",
+      "type": "GroupNorm",
+      "ms": 2.967166999951587,
+      "shape": [
+        2,
+        8,
+        8,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.2.transformer_blocks.0.attn1.out_proj",
+      "type": "Linear",
+      "ms": 2.9335840008570813,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.2.transformer_blocks.0.attn2",
+      "type": "MultiHeadAttention",
+      "ms": 2.930874999947264,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.3.resnets.1.conv1",
+      "type": "Conv2d",
+      "ms": 2.817708000293351,
+      "shape": [
+        2,
+        64,
+        64,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.3.resnets.2.conv1",
+      "type": "Conv2d",
+      "ms": 2.8130419996159617,
+      "shape": [
+        2,
+        64,
+        64,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.2.resnets.0.norm1",
+      "type": "GroupNorm",
+      "ms": 2.810209000017494,
+      "shape": [
+        2,
+        16,
+        16,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.0.transformer_blocks.0.attn2.out_proj",
+      "type": "Linear",
+      "ms": 2.8047920004610205,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.1.transformer_blocks.0.attn1.out_proj",
+      "type": "Linear",
+      "ms": 2.710000000661239,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.0.transformer_blocks.0.attn2",
+      "type": "MultiHeadAttention",
+      "ms": 2.636791999975685,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.1.transformer_blocks.0.attn2",
+      "type": "MultiHeadAttention",
+      "ms": 2.6271249989804346,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.1.transformer_blocks.0.attn2",
+      "type": "MultiHeadAttention",
+      "ms": 2.5969589987653308,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.0.proj_out",
+      "type": "Linear",
+      "ms": 2.5840839989541564,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.0.transformer_blocks.0.attn1.out_proj",
+      "type": "Linear",
+      "ms": 2.561375000368571,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.2.transformer_blocks.0.attn1.out_proj",
+      "type": "Linear",
+      "ms": 2.557791998697212,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.1.transformer_blocks.0.attn1.out_proj",
+      "type": "Linear",
+      "ms": 2.5289589993917616,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "mid_blocks.2.conv2",
+      "type": "Conv2d",
+      "ms": 2.4160409993783105,
+      "shape": [
+        2,
+        8,
+        8,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.2.transformer_blocks.0.norm3",
+      "type": "LayerNorm",
+      "ms": 2.4051249984040624,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "mid_blocks.0.conv1",
+      "type": "Conv2d",
+      "ms": 2.3440410004695877,
+      "shape": [
+        2,
+        8,
+        8,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.3.resnets.0.norm1",
+      "type": "GroupNorm",
+      "ms": 2.2295829985523596,
+      "shape": [
+        2,
+        64,
+        64,
+        960
+      ]
+    },
+    {
+      "name": "up_blocks.0.resnets.0.norm1",
+      "type": "GroupNorm",
+      "ms": 2.2117080006864853,
+      "shape": [
+        2,
+        8,
+        8,
+        2560
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.0.transformer_blocks.0.linear3",
+      "type": "Linear",
+      "ms": 2.199083000959945,
+      "shape": [
+        2,
+        1024,
+        2560
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.1.transformer_blocks.0.linear2",
+      "type": "Linear",
+      "ms": 2.1928339992882684,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.2.transformer_blocks.0.linear3",
+      "type": "Linear",
+      "ms": 2.1810840007674415,
+      "shape": [
+        2,
+        4096,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.2.resnets.0.norm1",
+      "type": "GroupNorm",
+      "ms": 2.1706659990741173,
+      "shape": [
+        2,
+        32,
+        32,
+        1920
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.0.transformer_blocks.0.linear3",
+      "type": "Linear",
+      "ms": 2.162917000532616,
+      "shape": [
+        2,
+        4096,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.2.transformer_blocks.0.attn2.out_proj",
+      "type": "Linear",
+      "ms": 2.1065830005682074,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.0.transformer_blocks.0.attn1",
+      "type": "MultiHeadAttention",
+      "ms": 2.093875000355183,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.1.transformer_blocks.0.linear2",
+      "type": "Linear",
+      "ms": 1.9815420000668382,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.1.transformer_blocks.0.attn1",
+      "type": "MultiHeadAttention",
+      "ms": 1.9482500010781223,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.2.resnets.1.norm2",
+      "type": "GroupNorm",
+      "ms": 1.9209160000173142,
+      "shape": [
+        2,
+        16,
+        16,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.0.resnets.1.conv1",
+      "type": "Conv2d",
+      "ms": 1.884334000351373,
+      "shape": [
+        2,
+        64,
+        64,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.3.resnets.2.conv2",
+      "type": "Conv2d",
+      "ms": 1.8839589993149275,
+      "shape": [
+        2,
+        64,
+        64,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.1.proj_out",
+      "type": "Linear",
+      "ms": 1.8696660008572508,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "mid_blocks.2.conv1",
+      "type": "Conv2d",
+      "ms": 1.869375000751461,
+      "shape": [
+        2,
+        8,
+        8,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.1.downsample",
+      "type": "Conv2d",
+      "ms": 1.8681250003282912,
+      "shape": [
+        2,
+        32,
+        32,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.3.resnets.0.conv2",
+      "type": "Conv2d",
+      "ms": 1.86191700049676,
+      "shape": [
+        2,
+        64,
+        64,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.0.resnets.0.conv2",
+      "type": "Conv2d",
+      "ms": 1.8524170009186491,
+      "shape": [
+        2,
+        64,
+        64,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.0.transformer_blocks.0.attn2",
+      "type": "MultiHeadAttention",
+      "ms": 1.8521660003898432,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.0.transformer_blocks.0.attn2",
+      "type": "MultiHeadAttention",
+      "ms": 1.8455419995007105,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.0.resnets.1.conv2",
+      "type": "Conv2d",
+      "ms": 1.8400000008114148,
+      "shape": [
+        2,
+        8,
+        8,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.0.downsample",
+      "type": "Conv2d",
+      "ms": 1.8263749989273492,
+      "shape": [
+        2,
+        64,
+        64,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.1.transformer_blocks.0.attn2",
+      "type": "MultiHeadAttention",
+      "ms": 1.8196249984612223,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.3.resnets.1.conv1",
+      "type": "Conv2d",
+      "ms": 1.7958329990506172,
+      "shape": [
+        2,
+        8,
+        8,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.0.transformer_blocks.0.attn2",
+      "type": "MultiHeadAttention",
+      "ms": 1.7854999987321207,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.3.resnets.1.conv2",
+      "type": "Conv2d",
+      "ms": 1.7847920007625362,
+      "shape": [
+        2,
+        64,
+        64,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.2.resnets.2.norm1",
+      "type": "GroupNorm",
+      "ms": 1.7794159994082293,
+      "shape": [
+        2,
+        32,
+        32,
+        960
+      ]
+    },
+    {
+      "name": "down_blocks.3.resnets.1.conv2",
+      "type": "Conv2d",
+      "ms": 1.774165999449906,
+      "shape": [
+        2,
+        8,
+        8,
+        1280
+      ]
+    },
+    {
+      "name": "mid_blocks.0.conv2",
+      "type": "Conv2d",
+      "ms": 1.7674589998932788,
+      "shape": [
+        2,
+        8,
+        8,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.0.resnets.1.conv2",
+      "type": "Conv2d",
+      "ms": 1.7542089990456589,
+      "shape": [
+        2,
+        64,
+        64,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.2.downsample",
+      "type": "Conv2d",
+      "ms": 1.7430419993615942,
+      "shape": [
+        2,
+        16,
+        16,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.2.transformer_blocks.0.attn2",
+      "type": "MultiHeadAttention",
+      "ms": 1.7416659993614303,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.1.transformer_blocks.0.attn2",
+      "type": "MultiHeadAttention",
+      "ms": 1.7397909996361705,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.1.transformer_blocks.0.attn2",
+      "type": "MultiHeadAttention",
+      "ms": 1.7328750000160653,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.0.resnets.0.conv2",
+      "type": "Conv2d",
+      "ms": 1.7217080003320007,
+      "shape": [
+        2,
+        8,
+        8,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.1.transformer_blocks.0.linear3",
+      "type": "Linear",
+      "ms": 1.6983329987851903,
+      "shape": [
+        2,
+        1024,
+        2560
+      ]
+    },
+    {
+      "name": "up_blocks.0.resnets.2.conv2",
+      "type": "Conv2d",
+      "ms": 1.6945000006671762,
+      "shape": [
+        2,
+        8,
+        8,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.1.transformer_blocks.0.attn2",
+      "type": "MultiHeadAttention",
+      "ms": 1.6924999999901047,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.3.resnets.0.conv1",
+      "type": "Conv2d",
+      "ms": 1.6869999999471474,
+      "shape": [
+        2,
+        8,
+        8,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.3.resnets.2.norm1",
+      "type": "GroupNorm",
+      "ms": 1.6782080001576105,
+      "shape": [
+        2,
+        64,
+        64,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.3.resnets.0.conv2",
+      "type": "Conv2d",
+      "ms": 1.66700000045239,
+      "shape": [
+        2,
+        8,
+        8,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.0.transformer_blocks.0.attn2",
+      "type": "MultiHeadAttention",
+      "ms": 1.6564580000704154,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.0.transformer_blocks.0.linear3",
+      "type": "Linear",
+      "ms": 1.6446250010631047,
+      "shape": [
+        2,
+        1024,
+        2560
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.1.norm",
+      "type": "GroupNorm",
+      "ms": 1.6430420000688173,
+      "shape": [
+        2,
+        32,
+        32,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.2.transformer_blocks.0.attn2.out_proj",
+      "type": "Linear",
+      "ms": 1.6257080005743774,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "time_embedding.linear_1",
+      "type": "Linear",
+      "ms": 1.6008749989850912,
+      "shape": [
+        2,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.2.transformer_blocks.0.linear3",
+      "type": "Linear",
+      "ms": 1.4994579996709945,
+      "shape": [
+        2,
+        1024,
+        2560
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.1.transformer_blocks.0.linear1",
+      "type": "Linear",
+      "ms": 1.4754590010852553,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.0.transformer_blocks.0.linear1",
+      "type": "Linear",
+      "ms": 1.47225000000617,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.1.transformer_blocks.0.attn2.out_proj",
+      "type": "Linear",
+      "ms": 1.4595419997931458,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.1.transformer_blocks.0.linear3",
+      "type": "Linear",
+      "ms": 1.4514579997921828,
+      "shape": [
+        2,
+        1024,
+        2560
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.2.transformer_blocks.0.linear1",
+      "type": "Linear",
+      "ms": 1.4450830003625015,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.1.transformer_blocks.0.attn2.out_proj",
+      "type": "Linear",
+      "ms": 1.432250001016655,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "mid_blocks.1.transformer_blocks.0.attn2",
+      "type": "MultiHeadAttention",
+      "ms": 1.4284580011008075,
+      "shape": [
+        2,
+        64,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.2.transformer_blocks.0.linear2",
+      "type": "Linear",
+      "ms": 1.4270410010794876,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.0.transformer_blocks.0.attn2.out_proj",
+      "type": "Linear",
+      "ms": 1.4261249998526182,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.0.transformer_blocks.0.linear1",
+      "type": "Linear",
+      "ms": 1.397916999849258,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.1.transformer_blocks.0.linear1",
+      "type": "Linear",
+      "ms": 1.3810419986839406,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.0.transformer_blocks.0.linear2",
+      "type": "Linear",
+      "ms": 1.373667000734713,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.0.transformer_blocks.0.linear2",
+      "type": "Linear",
+      "ms": 1.372958000501967,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.3.resnets.1.norm1",
+      "type": "GroupNorm",
+      "ms": 1.3573750002251472,
+      "shape": [
+        2,
+        64,
+        64,
+        640
+      ]
+    },
+    {
+      "name": "mid_blocks.1.transformer_blocks.0.attn1",
+      "type": "MultiHeadAttention",
+      "ms": 1.3556670000980375,
+      "shape": [
+        2,
+        64,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.0.transformer_blocks.0.linear1",
+      "type": "Linear",
+      "ms": 1.2890829984826269,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.1.transformer_blocks.0.linear2",
+      "type": "Linear",
+      "ms": 1.2258329988981131,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.2.transformer_blocks.0.linear3",
+      "type": "Linear",
+      "ms": 1.1832910004159203,
+      "shape": [
+        2,
+        256,
+        5120
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.2.transformer_blocks.0.attn1.query_proj",
+      "type": "Linear",
+      "ms": 1.1699999995471444,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.0.transformer_blocks.0.linear2",
+      "type": "Linear",
+      "ms": 1.1653749988909112,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.1.transformer_blocks.0.linear3",
+      "type": "Linear",
+      "ms": 1.1555409982975107,
+      "shape": [
+        2,
+        256,
+        5120
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.1.transformer_blocks.0.linear1",
+      "type": "Linear",
+      "ms": 1.1038329994335072,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.0.transformer_blocks.0.attn1.query_proj",
+      "type": "Linear",
+      "ms": 1.0964999983116286,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.0.transformer_blocks.0.attn1.value_proj",
+      "type": "Linear",
+      "ms": 1.0703330008254852,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.2.transformer_blocks.0.attn1.value_proj",
+      "type": "Linear",
+      "ms": 1.0618750002322486,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.2.transformer_blocks.0.linear1",
+      "type": "Linear",
+      "ms": 1.058791000104975,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.0.transformer_blocks.0.linear2",
+      "type": "Linear",
+      "ms": 1.0556249999353895,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.0.transformer_blocks.0.linear3",
+      "type": "Linear",
+      "ms": 1.0542500003793975,
+      "shape": [
+        2,
+        256,
+        5120
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.1.transformer_blocks.0.linear2",
+      "type": "Linear",
+      "ms": 1.037707999785198,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.2.transformer_blocks.0.linear1",
+      "type": "Linear",
+      "ms": 1.034500000969274,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.1.transformer_blocks.0.linear1",
+      "type": "Linear",
+      "ms": 1.0083330016641412,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.0.transformer_blocks.0.norm2",
+      "type": "LayerNorm",
+      "ms": 0.9950839994417038,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.1.resnets.0.time_emb_proj",
+      "type": "Linear",
+      "ms": 0.983959000222967,
+      "shape": [
+        2,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.1.transformer_blocks.0.linear2",
+      "type": "Linear",
+      "ms": 0.983750000159489,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.0.transformer_blocks.0.linear1",
+      "type": "Linear",
+      "ms": 0.977249999777996,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.0.transformer_blocks.0.linear1",
+      "type": "Linear",
+      "ms": 0.9716250006022165,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.1.transformer_blocks.0.linear2",
+      "type": "Linear",
+      "ms": 0.967583000601735,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.0.transformer_blocks.0.attn2.value_proj",
+      "type": "Linear",
+      "ms": 0.9594999992259545,
+      "shape": [
+        2,
+        77,
+        768
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.0.transformer_blocks.0.linear2",
+      "type": "Linear",
+      "ms": 0.9587080003257142,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.1.transformer_blocks.0.attn1.key_proj",
+      "type": "Linear",
+      "ms": 0.9490840002399636,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.3.resnets.0.conv_shortcut",
+      "type": "Linear",
+      "ms": 0.9490419997746358,
+      "shape": [
+        2,
+        64,
+        64,
+        960
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.2.transformer_blocks.0.linear2",
+      "type": "Linear",
+      "ms": 0.9467499985476024,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.0.transformer_blocks.0.norm3",
+      "type": "LayerNorm",
+      "ms": 0.9331670007668436,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.0.transformer_blocks.0.attn2.key_proj",
+      "type": "Linear",
+      "ms": 0.9269169986509951,
+      "shape": [
+        2,
+        77,
+        768
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.0.transformer_blocks.0.linear2",
+      "type": "Linear",
+      "ms": 0.9192079996864777,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.0.transformer_blocks.0.norm2",
+      "type": "LayerNorm",
+      "ms": 0.91887499911536,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.1.transformer_blocks.0.linear1",
+      "type": "Linear",
+      "ms": 0.915000000532018,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.2.transformer_blocks.0.norm3",
+      "type": "LayerNorm",
+      "ms": 0.9131249989877688,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.1.transformer_blocks.0.linear1",
+      "type": "Linear",
+      "ms": 0.9052920013346011,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.2.transformer_blocks.0.linear2",
+      "type": "Linear",
+      "ms": 0.904499998796382,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.2.transformer_blocks.0.attn1.value_proj",
+      "type": "Linear",
+      "ms": 0.8907089995773276,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.0.transformer_blocks.0.linear1",
+      "type": "Linear",
+      "ms": 0.8844579988362966,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.1.norm",
+      "type": "GroupNorm",
+      "ms": 0.8828330010146601,
+      "shape": [
+        2,
+        64,
+        64,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.1.transformer_blocks.0.norm3",
+      "type": "LayerNorm",
+      "ms": 0.8766670016484568,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.1.transformer_blocks.0.norm2",
+      "type": "LayerNorm",
+      "ms": 0.8762910001678392,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.0.transformer_blocks.0.norm3",
+      "type": "LayerNorm",
+      "ms": 0.8749580010771751,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.2.resnets.1.norm1",
+      "type": "GroupNorm",
+      "ms": 0.8722500006115297,
+      "shape": [
+        2,
+        32,
+        32,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.2.resnets.2.time_emb_proj",
+      "type": "Linear",
+      "ms": 0.8620419994258555,
+      "shape": [
+        2,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.0.transformer_blocks.0.attn2.query_proj",
+      "type": "Linear",
+      "ms": 0.8607500003563473,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.2.resnets.0.time_emb_proj",
+      "type": "Linear",
+      "ms": 0.8519580005668104,
+      "shape": [
+        2,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.1.transformer_blocks.0.norm3",
+      "type": "LayerNorm",
+      "ms": 0.8504170000378508,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.2.resnets.0.conv_shortcut",
+      "type": "Linear",
+      "ms": 0.8247910009231418,
+      "shape": [
+        2,
+        32,
+        32,
+        1920
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.1.proj_out",
+      "type": "Linear",
+      "ms": 0.809916000434896,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.0.transformer_blocks.0.norm1",
+      "type": "LayerNorm",
+      "ms": 0.8085839999694144,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.1.norm",
+      "type": "GroupNorm",
+      "ms": 0.7857500004320173,
+      "shape": [
+        2,
+        64,
+        64,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.0.resnets.0.norm1",
+      "type": "GroupNorm",
+      "ms": 0.7854579998820554,
+      "shape": [
+        2,
+        64,
+        64,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.2.transformer_blocks.0.attn1.query_proj",
+      "type": "Linear",
+      "ms": 0.7738340009382227,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.0.transformer_blocks.0.attn1.out_proj",
+      "type": "Linear",
+      "ms": 0.7662499992875382,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.0.resnets.0.norm2",
+      "type": "GroupNorm",
+      "ms": 0.7647080001333961,
+      "shape": [
+        2,
+        64,
+        64,
+        320
+      ]
+    },
+    {
+      "name": "conv_norm_out",
+      "type": "GroupNorm",
+      "ms": 0.7612499994138489,
+      "shape": [
+        2,
+        64,
+        64,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.0.norm",
+      "type": "GroupNorm",
+      "ms": 0.7550410009571351,
+      "shape": [
+        2,
+        64,
+        64,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.1.transformer_blocks.0.norm1",
+      "type": "LayerNorm",
+      "ms": 0.75062500036438,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.1.transformer_blocks.0.norm2",
+      "type": "LayerNorm",
+      "ms": 0.7449579989042832,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.0.resnets.1.norm2",
+      "type": "GroupNorm",
+      "ms": 0.7430420009768568,
+      "shape": [
+        2,
+        64,
+        64,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.0.proj_out",
+      "type": "Linear",
+      "ms": 0.7388329995592358,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.0.norm",
+      "type": "GroupNorm",
+      "ms": 0.7383749998552958,
+      "shape": [
+        2,
+        64,
+        64,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.3.resnets.0.norm2",
+      "type": "GroupNorm",
+      "ms": 0.7360839990724344,
+      "shape": [
+        2,
+        64,
+        64,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.2.norm",
+      "type": "GroupNorm",
+      "ms": 0.7322920009755762,
+      "shape": [
+        2,
+        64,
+        64,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.0.resnets.1.norm1",
+      "type": "GroupNorm",
+      "ms": 0.7310419987334171,
+      "shape": [
+        2,
+        64,
+        64,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.0.proj_out",
+      "type": "Linear",
+      "ms": 0.7272920011018869,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.1.transformer_blocks.0.attn2.out_proj",
+      "type": "Linear",
+      "ms": 0.7214999986899784,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.0.transformer_blocks.0.attn2.out_proj",
+      "type": "Linear",
+      "ms": 0.7071250001899898,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.2.transformer_blocks.0.norm1",
+      "type": "LayerNorm",
+      "ms": 0.7033749989204807,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.0.transformer_blocks.0.attn2.out_proj",
+      "type": "Linear",
+      "ms": 0.6942500003788155,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.2.resnets.2.conv_shortcut",
+      "type": "Linear",
+      "ms": 0.6929579994903179,
+      "shape": [
+        2,
+        32,
+        32,
+        960
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.1.transformer_blocks.0.attn1.key_proj",
+      "type": "Linear",
+      "ms": 0.6890830009069759,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.2.resnets.1.norm2",
+      "type": "GroupNorm",
+      "ms": 0.6854169987491332,
+      "shape": [
+        2,
+        32,
+        32,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.0.transformer_blocks.0.attn1.key_proj",
+      "type": "Linear",
+      "ms": 0.6770420004613698,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.1.transformer_blocks.0.norm1",
+      "type": "LayerNorm",
+      "ms": 0.6693750001431908,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.2.resnets.0.norm2",
+      "type": "GroupNorm",
+      "ms": 0.6683750016236445,
+      "shape": [
+        2,
+        32,
+        32,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.1.transformer_blocks.0.attn2.out_proj",
+      "type": "Linear",
+      "ms": 0.6673749994661193,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.0.transformer_blocks.0.norm1",
+      "type": "LayerNorm",
+      "ms": 0.6565829989995109,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.2.proj_out",
+      "type": "Linear",
+      "ms": 0.6552079994435189,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.0.transformer_blocks.0.attn2.out_proj",
+      "type": "Linear",
+      "ms": 0.6547909997607348,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.3.resnets.2.norm2",
+      "type": "GroupNorm",
+      "ms": 0.6532500010507647,
+      "shape": [
+        2,
+        64,
+        64,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.3.resnets.2.conv_shortcut",
+      "type": "Linear",
+      "ms": 0.6490000014309771,
+      "shape": [
+        2,
+        64,
+        64,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.1.proj_out",
+      "type": "Linear",
+      "ms": 0.6453749992942903,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.2.norm",
+      "type": "GroupNorm",
+      "ms": 0.6395410000550328,
+      "shape": [
+        2,
+        32,
+        32,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.1.transformer_blocks.0.attn1.out_proj",
+      "type": "Linear",
+      "ms": 0.6374169988703215,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.0.resnets.0.time_emb_proj",
+      "type": "Linear",
+      "ms": 0.6290000001172302,
+      "shape": [
+        2,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.0.transformer_blocks.0.attn2.out_proj",
+      "type": "Linear",
+      "ms": 0.6252499988477211,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.1.resnets.1.norm1",
+      "type": "GroupNorm",
+      "ms": 0.6199170002219034,
+      "shape": [
+        2,
+        32,
+        32,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.1.transformer_blocks.0.attn1.value_proj",
+      "type": "Linear",
+      "ms": 0.6157079988042824,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.2.resnets.2.norm2",
+      "type": "GroupNorm",
+      "ms": 0.608874999670661,
+      "shape": [
+        2,
+        32,
+        32,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.1.norm",
+      "type": "GroupNorm",
+      "ms": 0.6065419984224718,
+      "shape": [
+        2,
+        32,
+        32,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.1.transformer_blocks.0.attn2.out_proj",
+      "type": "Linear",
+      "ms": 0.6041670003469335,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.3.resnets.1.conv_shortcut",
+      "type": "Linear",
+      "ms": 0.5914159992244095,
+      "shape": [
+        2,
+        64,
+        64,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.2.transformer_blocks.0.attn2.out_proj",
+      "type": "Linear",
+      "ms": 0.5830000009154901,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.1.resnets.1.norm2",
+      "type": "GroupNorm",
+      "ms": 0.5740409997088136,
+      "shape": [
+        2,
+        16,
+        16,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.1.resnets.1.norm2",
+      "type": "GroupNorm",
+      "ms": 0.5710410005121958,
+      "shape": [
+        2,
+        32,
+        32,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.2.transformer_blocks.0.attn2.query_proj",
+      "type": "Linear",
+      "ms": 0.5691670012311079,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.0.proj_in",
+      "type": "Linear",
+      "ms": 0.5685420001100283,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.1.transformer_blocks.0.attn2.out_proj",
+      "type": "Linear",
+      "ms": 0.5673329997080145,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.1.proj_in",
+      "type": "Linear",
+      "ms": 0.5654159995174268,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.1.transformer_blocks.0.attn1.query_proj",
+      "type": "Linear",
+      "ms": 0.5645000001095468,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "conv_out",
+      "type": "Conv2d",
+      "ms": 0.5613749999611173,
+      "shape": [
+        2,
+        64,
+        64,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.2.resnets.1.conv_shortcut",
+      "type": "Linear",
+      "ms": 0.55587499991816,
+      "shape": [
+        2,
+        32,
+        32,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.1.transformer_blocks.0.attn2.query_proj",
+      "type": "Linear",
+      "ms": 0.5544159994315123,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.1.resnets.0.conv_shortcut",
+      "type": "Linear",
+      "ms": 0.55337500089081,
+      "shape": [
+        2,
+        16,
+        16,
+        2560
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.2.transformer_blocks.0.attn1.key_proj",
+      "type": "Linear",
+      "ms": 0.5463750003400492,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.0.transformer_blocks.0.norm3",
+      "type": "LayerNorm",
+      "ms": 0.5448749998322455,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.1.proj_in",
+      "type": "Linear",
+      "ms": 0.543332998859114,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.1.transformer_blocks.0.attn1.query_proj",
+      "type": "Linear",
+      "ms": 0.5428330005088355,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.0.transformer_blocks.0.attn2.query_proj",
+      "type": "Linear",
+      "ms": 0.5415000014181715,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.0.transformer_blocks.0.attn1.key_proj",
+      "type": "Linear",
+      "ms": 0.5394580002757721,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.1.resnets.1.conv_shortcut",
+      "type": "Linear",
+      "ms": 0.5371669994929107,
+      "shape": [
+        2,
+        16,
+        16,
+        2560
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.2.proj_in",
+      "type": "Linear",
+      "ms": 0.5313329984346638,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.1.resnets.2.norm2",
+      "type": "GroupNorm",
+      "ms": 0.5247500012046658,
+      "shape": [
+        2,
+        16,
+        16,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.0.transformer_blocks.0.attn1.value_proj",
+      "type": "Linear",
+      "ms": 0.5225000004429603,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.1.resnets.0.norm2",
+      "type": "GroupNorm",
+      "ms": 0.5151669993210817,
+      "shape": [
+        2,
+        16,
+        16,
+        1280
+      ]
+    },
+    {
+      "name": "mid_blocks.1.transformer_blocks.0.linear2",
+      "type": "Linear",
+      "ms": 0.5076249999547144,
+      "shape": [
+        2,
+        64,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.1.transformer_blocks.0.attn1.value_proj",
+      "type": "Linear",
+      "ms": 0.50754200128722,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.1.proj_in",
+      "type": "Linear",
+      "ms": 0.5057079997641267,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.1.transformer_blocks.0.attn2.query_proj",
+      "type": "Linear",
+      "ms": 0.503999999637017,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.0.transformer_blocks.0.attn1.value_proj",
+      "type": "Linear",
+      "ms": 0.5028340001445031,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.0.norm",
+      "type": "GroupNorm",
+      "ms": 0.500625001222943,
+      "shape": [
+        2,
+        32,
+        32,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.0.proj_in",
+      "type": "Linear",
+      "ms": 0.4992499998479616,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.1.resnets.1.norm1",
+      "type": "GroupNorm",
+      "ms": 0.49662499986879993,
+      "shape": [
+        2,
+        16,
+        16,
+        2560
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.2.proj_in",
+      "type": "Linear",
+      "ms": 0.49374999980500434,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "conv_in",
+      "type": "Conv2d",
+      "ms": 0.49083299927588087,
+      "shape": [
+        2,
+        64,
+        64,
+        4
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.2.proj_out",
+      "type": "Linear",
+      "ms": 0.4872089994023554,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "mid_blocks.1.transformer_blocks.0.linear1",
+      "type": "Linear",
+      "ms": 0.48512500143260695,
+      "shape": [
+        2,
+        64,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.1.transformer_blocks.0.attn1.key_proj",
+      "type": "Linear",
+      "ms": 0.48295899978256784,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.1.resnets.2.conv_shortcut",
+      "type": "Linear",
+      "ms": 0.47899999844958074,
+      "shape": [
+        2,
+        16,
+        16,
+        1920
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.2.transformer_blocks.0.attn2.query_proj",
+      "type": "Linear",
+      "ms": 0.47766700117790606,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.0.transformer_blocks.0.attn1.query_proj",
+      "type": "Linear",
+      "ms": 0.47479199929512106,
+      "shape": [
+        2,
+        4096,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.0.proj_out",
+      "type": "Linear",
+      "ms": 0.4677500000980217,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.0.norm",
+      "type": "GroupNorm",
+      "ms": 0.46695899982296396,
+      "shape": [
+        2,
+        32,
+        32,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.0.proj_in",
+      "type": "Linear",
+      "ms": 0.4625829988071928,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "mid_blocks.1.transformer_blocks.0.linear3",
+      "type": "Linear",
+      "ms": 0.461583998912829,
+      "shape": [
+        2,
+        64,
+        5120
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.0.transformer_blocks.0.attn2.query_proj",
+      "type": "Linear",
+      "ms": 0.4615830002876464,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.1.resnets.0.norm2",
+      "type": "GroupNorm",
+      "ms": 0.4594170004565967,
+      "shape": [
+        2,
+        32,
+        32,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.0.transformer_blocks.0.norm2",
+      "type": "LayerNorm",
+      "ms": 0.45904099897597916,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.1.resnets.0.conv_shortcut",
+      "type": "Linear",
+      "ms": 0.4511660008574836,
+      "shape": [
+        2,
+        32,
+        32,
+        320
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.2.transformer_blocks.0.norm2",
+      "type": "LayerNorm",
+      "ms": 0.4464590001589386,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.1.proj_out",
+      "type": "Linear",
+      "ms": 0.443584000095143,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.1.resnets.2.norm1",
+      "type": "GroupNorm",
+      "ms": 0.44279099893174134,
+      "shape": [
+        2,
+        16,
+        16,
+        1920
+      ]
+    },
+    {
+      "name": "time_embedding.linear_2",
+      "type": "Linear",
+      "ms": 0.4377089990157401,
+      "shape": [
+        2,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.0.norm",
+      "type": "GroupNorm",
+      "ms": 0.4370830010884674,
+      "shape": [
+        2,
+        16,
+        16,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.0.proj_in",
+      "type": "Linear",
+      "ms": 0.436624999565538,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.1.transformer_blocks.0.attn2.query_proj",
+      "type": "Linear",
+      "ms": 0.43575000017881393,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.0.transformer_blocks.0.attn1.value_proj",
+      "type": "Linear",
+      "ms": 0.43220900079177227,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.2.proj_out",
+      "type": "Linear",
+      "ms": 0.4317499988246709,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.2.proj_in",
+      "type": "Linear",
+      "ms": 0.4316670001571765,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.1.transformer_blocks.0.attn1.key_proj",
+      "type": "Linear",
+      "ms": 0.4284170008759247,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.1.transformer_blocks.0.attn1.query_proj",
+      "type": "Linear",
+      "ms": 0.42820899943762925,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.0.transformer_blocks.0.attn1.value_proj",
+      "type": "Linear",
+      "ms": 0.42799999937415123,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.1.resnets.0.norm1",
+      "type": "GroupNorm",
+      "ms": 0.42620900057954714,
+      "shape": [
+        2,
+        32,
+        32,
+        320
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.1.proj_out",
+      "type": "Linear",
+      "ms": 0.42512500112934504,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.1.transformer_blocks.0.norm2",
+      "type": "LayerNorm",
+      "ms": 0.4249579997122055,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.1.transformer_blocks.0.attn1.query_proj",
+      "type": "Linear",
+      "ms": 0.42479100011405535,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.2.transformer_blocks.0.attn1.key_proj",
+      "type": "Linear",
+      "ms": 0.4202499985694885,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.2.transformer_blocks.0.attn1.value_proj",
+      "type": "Linear",
+      "ms": 0.42004199895018246,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.1.transformer_blocks.0.norm2",
+      "type": "LayerNorm",
+      "ms": 0.4175410012976499,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.0.proj_out",
+      "type": "Linear",
+      "ms": 0.41695800064189825,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.1.transformer_blocks.0.attn1.value_proj",
+      "type": "Linear",
+      "ms": 0.4157920011493843,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.2.resnets.0.time_emb_proj",
+      "type": "Linear",
+      "ms": 0.4153749996476108,
+      "shape": [
+        2,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.0.proj_out",
+      "type": "Linear",
+      "ms": 0.41450000026088674,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.0.transformer_blocks.0.attn2.key_proj",
+      "type": "Linear",
+      "ms": 0.4133339989493834,
+      "shape": [
+        2,
+        77,
+        768
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.1.transformer_blocks.0.attn1.query_proj",
+      "type": "Linear",
+      "ms": 0.4129170010855887,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.0.transformer_blocks.0.attn2.query_proj",
+      "type": "Linear",
+      "ms": 0.41041599979507737,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.1.transformer_blocks.0.attn2.query_proj",
+      "type": "Linear",
+      "ms": 0.40674999945622403,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.0.proj_in",
+      "type": "Linear",
+      "ms": 0.4036249993077945,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.1.transformer_blocks.0.attn2.query_proj",
+      "type": "Linear",
+      "ms": 0.4019999996671686,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.1.proj_out",
+      "type": "Linear",
+      "ms": 0.4000830012955703,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.1.proj_in",
+      "type": "Linear",
+      "ms": 0.3997090007032966,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.0.proj_in",
+      "type": "Linear",
+      "ms": 0.39670899968768936,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.1.transformer_blocks.0.norm3",
+      "type": "LayerNorm",
+      "ms": 0.3960409994760994,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.0.transformer_blocks.0.attn1.query_proj",
+      "type": "Linear",
+      "ms": 0.39525000102003105,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.0.transformer_blocks.0.attn1.query_proj",
+      "type": "Linear",
+      "ms": 0.39516700053354725,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.1.transformer_blocks.0.attn1.query_proj",
+      "type": "Linear",
+      "ms": 0.39233400093507953,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.2.norm",
+      "type": "GroupNorm",
+      "ms": 0.3922500000044238,
+      "shape": [
+        2,
+        16,
+        16,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.1.norm",
+      "type": "GroupNorm",
+      "ms": 0.3917920003004838,
+      "shape": [
+        2,
+        16,
+        16,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.0.transformer_blocks.0.attn1.key_proj",
+      "type": "Linear",
+      "ms": 0.3892919994541444,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.0.transformer_blocks.0.attn1.query_proj",
+      "type": "Linear",
+      "ms": 0.38829200093459804,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.0.transformer_blocks.0.attn1.value_proj",
+      "type": "Linear",
+      "ms": 0.3880829990521306,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "mid_blocks.1.transformer_blocks.0.attn1.out_proj",
+      "type": "Linear",
+      "ms": 0.3880829990521306,
+      "shape": [
+        2,
+        64,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.0.transformer_blocks.0.attn1.key_proj",
+      "type": "Linear",
+      "ms": 0.3847919997497229,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.0.transformer_blocks.0.attn2.query_proj",
+      "type": "Linear",
+      "ms": 0.3835830011666985,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.1.transformer_blocks.0.attn1.key_proj",
+      "type": "Linear",
+      "ms": 0.38245900032052305,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.2.transformer_blocks.0.attn2.query_proj",
+      "type": "Linear",
+      "ms": 0.38012499862816185,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.1.transformer_blocks.0.attn1.value_proj",
+      "type": "Linear",
+      "ms": 0.3800840004259953,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.0.norm",
+      "type": "GroupNorm",
+      "ms": 0.37945799886074383,
+      "shape": [
+        2,
+        16,
+        16,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.0.transformer_blocks.0.attn2.query_proj",
+      "type": "Linear",
+      "ms": 0.37887500002398156,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "mid_blocks.1.transformer_blocks.0.attn2.out_proj",
+      "type": "Linear",
+      "ms": 0.3782920011872193,
+      "shape": [
+        2,
+        64,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.0.transformer_blocks.0.attn1.query_proj",
+      "type": "Linear",
+      "ms": 0.377124999431544,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.0.transformer_blocks.0.attn1.key_proj",
+      "type": "Linear",
+      "ms": 0.37641699964297004,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.2.transformer_blocks.0.attn1.key_proj",
+      "type": "Linear",
+      "ms": 0.3759580013138475,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.1.transformer_blocks.0.attn2.query_proj",
+      "type": "Linear",
+      "ms": 0.3749169991351664,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.2.resnets.0.norm2",
+      "type": "GroupNorm",
+      "ms": 0.373500000932836,
+      "shape": [
+        2,
+        16,
+        16,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.1.transformer_blocks.0.attn1.key_proj",
+      "type": "Linear",
+      "ms": 0.37150000025576446,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.1.transformer_blocks.0.attn1.value_proj",
+      "type": "Linear",
+      "ms": 0.36904199987475295,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.1.proj_in",
+      "type": "Linear",
+      "ms": 0.36462499883782584,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.0.transformer_blocks.0.attn1.key_proj",
+      "type": "Linear",
+      "ms": 0.362082999345148,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.1.transformer_blocks.0.attn2.key_proj",
+      "type": "Linear",
+      "ms": 0.36133300091023557,
+      "shape": [
+        2,
+        77,
+        768
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.1.norm",
+      "type": "GroupNorm",
+      "ms": 0.3582499994081445,
+      "shape": [
+        2,
+        16,
+        16,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.1.transformer_blocks.0.norm1",
+      "type": "LayerNorm",
+      "ms": 0.35799999932351056,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.0.transformer_blocks.0.attn2.key_proj",
+      "type": "Linear",
+      "ms": 0.35645800016936846,
+      "shape": [
+        2,
+        77,
+        768
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.2.transformer_blocks.0.attn1.query_proj",
+      "type": "Linear",
+      "ms": 0.35312500040163286,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.1.transformer_blocks.0.attn1.value_proj",
+      "type": "Linear",
+      "ms": 0.3522500010149088,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.2.resnets.1.norm1",
+      "type": "GroupNorm",
+      "ms": 0.3519159999996191,
+      "shape": [
+        2,
+        16,
+        16,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.1.transformer_blocks.0.norm3",
+      "type": "LayerNorm",
+      "ms": 0.35070800004177727,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.0.transformer_blocks.0.norm3",
+      "type": "LayerNorm",
+      "ms": 0.3457909988355823,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.1.transformer_blocks.0.attn2.value_proj",
+      "type": "Linear",
+      "ms": 0.34337500073888805,
+      "shape": [
+        2,
+        77,
+        768
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.1.proj_in",
+      "type": "Linear",
+      "ms": 0.339374999384745,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.2.transformer_blocks.0.attn2.key_proj",
+      "type": "Linear",
+      "ms": 0.3349999988131458,
+      "shape": [
+        2,
+        77,
+        768
+      ]
+    },
+    {
+      "name": "down_blocks.2.resnets.0.conv_shortcut",
+      "type": "Linear",
+      "ms": 0.33245799932046793,
+      "shape": [
+        2,
+        16,
+        16,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.2.transformer_blocks.0.attn2.key_proj",
+      "type": "Linear",
+      "ms": 0.3310000010969816,
+      "shape": [
+        2,
+        77,
+        768
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.2.transformer_blocks.0.norm1",
+      "type": "LayerNorm",
+      "ms": 0.32770899997558445,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "mid_blocks.1.transformer_blocks.0.attn2.query_proj",
+      "type": "Linear",
+      "ms": 0.3240000005462207,
+      "shape": [
+        2,
+        64,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.2.transformer_blocks.0.norm3",
+      "type": "LayerNorm",
+      "ms": 0.32300000020768493,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.0.resnets.2.conv_shortcut",
+      "type": "Linear",
+      "ms": 0.32279200058837887,
+      "shape": [
+        2,
+        8,
+        8,
+        2560
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.2.transformer_blocks.0.attn2.value_proj",
+      "type": "Linear",
+      "ms": 0.32174999978451524,
+      "shape": [
+        2,
+        77,
+        768
+      ]
+    },
+    {
+      "name": "up_blocks.0.resnets.1.norm1",
+      "type": "GroupNorm",
+      "ms": 0.32058299984782934,
+      "shape": [
+        2,
+        8,
+        8,
+        2560
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.1.transformer_blocks.0.norm2",
+      "type": "LayerNorm",
+      "ms": 0.31874999876890797,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.2.transformer_blocks.0.attn2.value_proj",
+      "type": "Linear",
+      "ms": 0.31850000050326344,
+      "shape": [
+        2,
+        77,
+        768
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.0.transformer_blocks.0.attn2.value_proj",
+      "type": "Linear",
+      "ms": 0.3161250006087357,
+      "shape": [
+        2,
+        77,
+        768
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.0.transformer_blocks.0.norm1",
+      "type": "LayerNorm",
+      "ms": 0.31429199952981435,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.0.transformer_blocks.0.norm1",
+      "type": "LayerNorm",
+      "ms": 0.31329100056609605,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "up_blocks.0.resnets.0.conv_shortcut",
+      "type": "Linear",
+      "ms": 0.3088749999733409,
+      "shape": [
+        2,
+        8,
+        8,
+        2560
+      ]
+    },
+    {
+      "name": "mid_blocks.1.transformer_blocks.0.attn2.value_proj",
+      "type": "Linear",
+      "ms": 0.30783300098846667,
+      "shape": [
+        2,
+        77,
+        768
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.1.transformer_blocks.0.attn2.key_proj",
+      "type": "Linear",
+      "ms": 0.30345800041686743,
+      "shape": [
+        2,
+        77,
+        768
+      ]
+    },
+    {
+      "name": "down_blocks.1.resnets.0.time_emb_proj",
+      "type": "Linear",
+      "ms": 0.30212499950721394,
+      "shape": [
+        2,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.0.transformer_blocks.0.norm2",
+      "type": "LayerNorm",
+      "ms": 0.3002919984282926,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.1.transformer_blocks.0.norm1",
+      "type": "LayerNorm",
+      "ms": 0.30012499883014243,
+      "shape": [
+        2,
+        1024,
+        640
+      ]
+    },
+    {
+      "name": "mid_blocks.1.transformer_blocks.0.attn1.value_proj",
+      "type": "Linear",
+      "ms": 0.2962499984278111,
+      "shape": [
+        2,
+        64,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.0.resnets.1.conv_shortcut",
+      "type": "Linear",
+      "ms": 0.2959580015158281,
+      "shape": [
+        2,
+        8,
+        8,
+        2560
+      ]
+    },
+    {
+      "name": "mid_blocks.1.transformer_blocks.0.attn2.key_proj",
+      "type": "Linear",
+      "ms": 0.29570799961220473,
+      "shape": [
+        2,
+        77,
+        768
+      ]
+    },
+    {
+      "name": "down_blocks.3.resnets.1.norm1",
+      "type": "GroupNorm",
+      "ms": 0.2934580006694887,
+      "shape": [
+        2,
+        8,
+        8,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.3.resnets.2.time_emb_proj",
+      "type": "Linear",
+      "ms": 0.28824999935750384,
+      "shape": [
+        2,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.0.transformer_blocks.0.attn2.key_proj",
+      "type": "Linear",
+      "ms": 0.28774999918823596,
+      "shape": [
+        2,
+        77,
+        768
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.0.transformer_blocks.0.norm3",
+      "type": "LayerNorm",
+      "ms": 0.2842920002876781,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.2.transformer_blocks.0.norm2",
+      "type": "LayerNorm",
+      "ms": 0.280541999018169,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.0.resnets.2.norm2",
+      "type": "GroupNorm",
+      "ms": 0.2797499982989393,
+      "shape": [
+        2,
+        8,
+        8,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.3.resnets.0.norm1",
+      "type": "GroupNorm",
+      "ms": 0.27970800147159025,
+      "shape": [
+        2,
+        8,
+        8,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.1.transformer_blocks.0.attn2.value_proj",
+      "type": "Linear",
+      "ms": 0.279416999546811,
+      "shape": [
+        2,
+        77,
+        768
+      ]
+    },
+    {
+      "name": "mid_blocks.1.norm",
+      "type": "GroupNorm",
+      "ms": 0.27887499891221523,
+      "shape": [
+        2,
+        8,
+        8,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.1.transformer_blocks.0.attn2.key_proj",
+      "type": "Linear",
+      "ms": 0.27399999999033753,
+      "shape": [
+        2,
+        77,
+        768
+      ]
+    },
+    {
+      "name": "up_blocks.0.resnets.0.norm2",
+      "type": "GroupNorm",
+      "ms": 0.2736250007728813,
+      "shape": [
+        2,
+        8,
+        8,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.3.resnets.1.norm2",
+      "type": "GroupNorm",
+      "ms": 0.27208400024392176,
+      "shape": [
+        2,
+        8,
+        8,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.1.transformer_blocks.0.attn2.value_proj",
+      "type": "Linear",
+      "ms": 0.2716250000958098,
+      "shape": [
+        2,
+        77,
+        768
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.1.transformer_blocks.0.norm3",
+      "type": "LayerNorm",
+      "ms": 0.27149999914399814,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "mid_blocks.1.transformer_blocks.0.attn1.query_proj",
+      "type": "Linear",
+      "ms": 0.27095899895357434,
+      "shape": [
+        2,
+        64,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.0.resnets.1.time_emb_proj",
+      "type": "Linear",
+      "ms": 0.26958300077239983,
+      "shape": [
+        2,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.0.resnets.1.time_emb_proj",
+      "type": "Linear",
+      "ms": 0.2675830000953283,
+      "shape": [
+        2,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.3.resnets.0.time_emb_proj",
+      "type": "Linear",
+      "ms": 0.2672080008778721,
+      "shape": [
+        2,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.3.resnets.0.time_emb_proj",
+      "type": "Linear",
+      "ms": 0.26649999927030876,
+      "shape": [
+        2,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.0.transformer_blocks.0.norm2",
+      "type": "LayerNorm",
+      "ms": 0.2642499985086033,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.1.transformer_blocks.0.attn2.value_proj",
+      "type": "Linear",
+      "ms": 0.2642090003064368,
+      "shape": [
+        2,
+        77,
+        768
+      ]
+    },
+    {
+      "name": "mid_blocks.1.transformer_blocks.0.attn1.key_proj",
+      "type": "Linear",
+      "ms": 0.26420799986226484,
+      "shape": [
+        2,
+        64,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.0.transformer_blocks.0.attn2.value_proj",
+      "type": "Linear",
+      "ms": 0.2639579997776309,
+      "shape": [
+        2,
+        77,
+        768
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.1.transformer_blocks.0.attn2.value_proj",
+      "type": "Linear",
+      "ms": 0.2635410000948468,
+      "shape": [
+        2,
+        77,
+        768
+      ]
+    },
+    {
+      "name": "up_blocks.0.resnets.1.norm2",
+      "type": "GroupNorm",
+      "ms": 0.26270899979863316,
+      "shape": [
+        2,
+        8,
+        8,
+        1280
+      ]
+    },
+    {
+      "name": "mid_blocks.0.norm1",
+      "type": "GroupNorm",
+      "ms": 0.26204200003121514,
+      "shape": [
+        2,
+        8,
+        8,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.2.transformer_blocks.0.attn2.key_proj",
+      "type": "Linear",
+      "ms": 0.25920799998857547,
+      "shape": [
+        2,
+        77,
+        768
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.2.transformer_blocks.0.norm1",
+      "type": "LayerNorm",
+      "ms": 0.2585000002000015,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.0.resnets.0.time_emb_proj",
+      "type": "Linear",
+      "ms": 0.25579199973435607,
+      "shape": [
+        2,
+        1280
+      ]
+    },
+    {
+      "name": "mid_blocks.1.transformer_blocks.0.norm3",
+      "type": "LayerNorm",
+      "ms": 0.2545000006648479,
+      "shape": [
+        2,
+        64,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.0.transformer_blocks.0.attn2.key_proj",
+      "type": "Linear",
+      "ms": 0.2528749992052326,
+      "shape": [
+        2,
+        77,
+        768
+      ]
+    },
+    {
+      "name": "up_blocks.2.resnets.1.time_emb_proj",
+      "type": "Linear",
+      "ms": 0.25191600070684217,
+      "shape": [
+        2,
+        1280
+      ]
+    },
+    {
+      "name": "mid_blocks.2.norm1",
+      "type": "GroupNorm",
+      "ms": 0.25133400049526244,
+      "shape": [
+        2,
+        8,
+        8,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.2.transformer_blocks.0.attn2.value_proj",
+      "type": "Linear",
+      "ms": 0.2512089995434508,
+      "shape": [
+        2,
+        77,
+        768
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.1.transformer_blocks.0.norm3",
+      "type": "LayerNorm",
+      "ms": 0.25112500043178443,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.3.resnets.1.time_emb_proj",
+      "type": "Linear",
+      "ms": 0.25099999947997276,
+      "shape": [
+        2,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.0.transformer_blocks.0.attn2.key_proj",
+      "type": "Linear",
+      "ms": 0.2498339999874588,
+      "shape": [
+        2,
+        77,
+        768
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.0.transformer_blocks.0.attn2.value_proj",
+      "type": "Linear",
+      "ms": 0.24974999905680306,
+      "shape": [
+        2,
+        77,
+        768
+      ]
+    },
+    {
+      "name": "mid_blocks.2.norm2",
+      "type": "GroupNorm",
+      "ms": 0.2497079985914752,
+      "shape": [
+        2,
+        8,
+        8,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.1.resnets.1.time_emb_proj",
+      "type": "Linear",
+      "ms": 0.24791599935269915,
+      "shape": [
+        2,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.1.transformer_blocks.0.norm2",
+      "type": "LayerNorm",
+      "ms": 0.24699999994481914,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.1.transformer_blocks.0.norm1",
+      "type": "LayerNorm",
+      "ms": 0.2467499998601852,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "mid_blocks.1.transformer_blocks.0.norm2",
+      "type": "LayerNorm",
+      "ms": 0.24620800104457885,
+      "shape": [
+        2,
+        64,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.1.transformer_blocks.0.attn2.key_proj",
+      "type": "Linear",
+      "ms": 0.24445800045214128,
+      "shape": [
+        2,
+        77,
+        768
+      ]
+    },
+    {
+      "name": "up_blocks.1.resnets.2.time_emb_proj",
+      "type": "Linear",
+      "ms": 0.2440410007693572,
+      "shape": [
+        2,
+        1280
+      ]
+    },
+    {
+      "name": "mid_blocks.1.proj_in",
+      "type": "Linear",
+      "ms": 0.2433340014249552,
+      "shape": [
+        2,
+        64,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.0.transformer_blocks.0.norm3",
+      "type": "LayerNorm",
+      "ms": 0.24299999859067611,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.3.resnets.0.norm2",
+      "type": "GroupNorm",
+      "ms": 0.24241699975391384,
+      "shape": [
+        2,
+        8,
+        8,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.1.transformer_blocks.0.attn2.key_proj",
+      "type": "Linear",
+      "ms": 0.24133300030371174,
+      "shape": [
+        2,
+        77,
+        768
+      ]
+    },
+    {
+      "name": "mid_blocks.1.proj_out",
+      "type": "Linear",
+      "ms": 0.24112499886541627,
+      "shape": [
+        2,
+        64,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.1.attentions.1.transformer_blocks.0.attn2.key_proj",
+      "type": "Linear",
+      "ms": 0.23950000104377978,
+      "shape": [
+        2,
+        77,
+        768
+      ]
+    },
+    {
+      "name": "down_blocks.2.resnets.1.time_emb_proj",
+      "type": "Linear",
+      "ms": 0.2381250014877878,
+      "shape": [
+        2,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.3.attentions.1.transformer_blocks.0.attn2.value_proj",
+      "type": "Linear",
+      "ms": 0.2369579997321125,
+      "shape": [
+        2,
+        77,
+        768
+      ]
+    },
+    {
+      "name": "mid_blocks.0.time_emb_proj",
+      "type": "Linear",
+      "ms": 0.23112499911803752,
+      "shape": [
+        2,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.2.attentions.0.transformer_blocks.0.attn2.value_proj",
+      "type": "Linear",
+      "ms": 0.22762499975215178,
+      "shape": [
+        2,
+        77,
+        768
+      ]
+    },
+    {
+      "name": "down_blocks.0.attentions.0.transformer_blocks.0.attn2.value_proj",
+      "type": "Linear",
+      "ms": 0.22600000011152588,
+      "shape": [
+        2,
+        77,
+        768
+      ]
+    },
+    {
+      "name": "up_blocks.0.resnets.2.time_emb_proj",
+      "type": "Linear",
+      "ms": 0.22333299966703635,
+      "shape": [
+        2,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.1.transformer_blocks.0.norm1",
+      "type": "LayerNorm",
+      "ms": 0.22054100008972455,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.1.resnets.1.time_emb_proj",
+      "type": "Linear",
+      "ms": 0.21733399989898317,
+      "shape": [
+        2,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.3.resnets.1.time_emb_proj",
+      "type": "Linear",
+      "ms": 0.21474999994097743,
+      "shape": [
+        2,
+        1280
+      ]
+    },
+    {
+      "name": "up_blocks.1.attentions.0.transformer_blocks.0.norm1",
+      "type": "LayerNorm",
+      "ms": 0.2123340000252938,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "mid_blocks.1.transformer_blocks.0.norm1",
+      "type": "LayerNorm",
+      "ms": 0.20562499958032276,
+      "shape": [
+        2,
+        64,
+        1280
+      ]
+    },
+    {
+      "name": "down_blocks.2.attentions.0.transformer_blocks.0.norm1",
+      "type": "LayerNorm",
+      "ms": 0.20525000036286656,
+      "shape": [
+        2,
+        256,
+        1280
+      ]
+    },
+    {
+      "name": "mid_blocks.2.time_emb_proj",
+      "type": "Linear",
+      "ms": 0.20495799981290475,
+      "shape": [
+        2,
+        1280
+      ]
+    }
+  ]
+}

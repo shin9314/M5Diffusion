@@ -1,0 +1,13 @@
+{
+  "real_engine": "SD1.5 MLX compiled padded attention",
+  "test_latent_shape": [
+    1,
+    8,
+    8,
+    4
+  ],
+  "changed_output_max_abs": 0.00395512580871582,
+  "restored_output_max_abs": 0.0,
+  "restored_weight_exact": true,
+  "active_originals_after_remove": 0
+}

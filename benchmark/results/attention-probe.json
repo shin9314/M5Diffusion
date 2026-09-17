@@ -1,0 +1,49 @@
+[
+  {
+    "n": 4096,
+    "d": 40,
+    "mode": "default",
+    "seconds": 0.030819416799931786,
+    "max_abs": 0.0
+  },
+  {
+    "n": 4096,
+    "d": 40,
+    "mode": "forced",
+    "error": "[scaled_dot_product_attention] force_fused=True but no fused kernel is available: the full attention kernel supports head dims {64, 72, 80, 96, 128, 192, 256} with matching query/value head dims; got query head dim 40 and value head dim 40."
+  },
+  {
+    "n": 4096,
+    "d": 40,
+    "mode": "pad64",
+    "seconds": 0.00691005840053549,
+    "max_abs": 0.00048828125
+  },
+  {
+    "n": 1024,
+    "d": 80,
+    "mode": "default",
+    "seconds": 0.0017522831996757305,
+    "max_abs": 0.0
+  },
+  {
+    "n": 1024,
+    "d": 80,
+    "mode": "forced",
+    "seconds": 0.0018668420001631604,
+    "max_abs": 0.0
+  },
+  {
+    "n": 256,
+    "d": 160,
+    "mode": "default",
+    "seconds": 0.0004990334004105534,
+    "max_abs": 0.0
+  },
+  {
+    "n": 256,
+    "d": 160,
+    "mode": "forced",
+    "error": "[scaled_dot_product_attention] force_fused=True but no fused kernel is available: the full attention kernel supports head dims {64, 72, 80, 96, 128, 192, 256} with matching query/value head dims; got query head dim 160 and value head dim 160."
+  }
+]

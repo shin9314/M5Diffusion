@@ -1,0 +1,93 @@
+{
+  "request": {
+    "prompt": "a small cozy cabin beside a lake, mountains in the background, golden morning light, landscape photography",
+    "negative_prompt": "",
+    "seed": 12345,
+    "width": 512,
+    "height": 512,
+    "steps": 20,
+    "cfg": 7
+  },
+  "model": "<project>/models/sd15",
+  "sampler": "DPM++ 2M",
+  "schedule": "Karras rho=7",
+  "rng": "NumPy PCG64 float32 NCHW shared bytes",
+  "precision": "UNet+CLIP fp16; VAE+latents fp32",
+  "model_load_time": 0.28271966699867335,
+  "before": {
+    "system_memory_used_mb": 10067.46875,
+    "system_memory_available_mb": 13087.015625,
+    "swap_mb": 9203.1875,
+    "temperature_c": null,
+    "power_w": null,
+    "gpu_utilization_percent": null,
+    "gpu_frequency_mhz": null,
+    "thermal_state": 1,
+    "memory_pressure_raw": "The system has 25769803776 (1572864 pages with a page size of 16384).\nSystem-wide memory free percentage: 84%"
+  },
+  "after": {
+    "system_memory_used_mb": 10623.765625,
+    "system_memory_available_mb": 12548.1875,
+    "swap_mb": 9163.1875,
+    "temperature_c": null,
+    "power_w": null,
+    "gpu_utilization_percent": null,
+    "gpu_frequency_mhz": null,
+    "thermal_state": 1,
+    "memory_pressure_raw": "The system has 25769803776 (1572864 pages with a page size of 16384).\nSystem-wide memory free percentage: 83%"
+  },
+  "runs": [
+    {
+      "run": 0,
+      "cold": true,
+      "backend": "mlx",
+      "compiled": false,
+      "quantize": 0,
+      "buffer_reuse": true,
+      "prepare_time": 0.5058394580009917,
+      "text_encoder_time": 0.016854458999659983,
+      "diffusion_time": 14.075129000000743,
+      "vae_time": 1.1494288339999912,
+      "readback_time": 0.0012302499999350403,
+      "total_time": 15.748482001001321,
+      "seconds_per_step": 0.7037564500000372,
+      "backend_peak_mb": 6434.409336090088,
+      "backend_allocated_mb": 2194.1592292785645,
+      "backend_cache_mb": 256.0,
+      "peak_rss_mb": 597.28125,
+      "cpu_percent_mean": 32.91111111111112,
+      "peak_swap_mb": 9203.1875,
+      "png_time": 0.06484695900144288,
+      "image": "20260916-174419-mlx-bounded-0.png"
+    },
+    {
+      "run": 1,
+      "cold": false,
+      "backend": "mlx",
+      "compiled": false,
+      "quantize": 0,
+      "buffer_reuse": true,
+      "prepare_time": 0.0802867909987981,
+      "text_encoder_time": 0.020570750000842963,
+      "diffusion_time": 19.98345912500008,
+      "vae_time": 1.217251916999885,
+      "readback_time": 0.0009165419996861601,
+      "total_time": 21.302485124999293,
+      "seconds_per_step": 0.999172956250004,
+      "backend_peak_mb": 6434.409336090088,
+      "backend_allocated_mb": 2325.1592292785645,
+      "backend_cache_mb": 256.0,
+      "peak_rss_mb": 437.609375,
+      "cpu_percent_mean": 33.57380952380953,
+      "peak_swap_mb": 9203.1875,
+      "png_time": 0.09105158300008043,
+      "image": "20260916-174419-mlx-bounded-1.png"
+    }
+  ],
+  "metric_notes": {
+    "rss": "Process RSS includes shared pages; do not add GPU allocations to RSS",
+    "gpu_peak": "MLX peak allocation is not total system unified-memory peak; MPS peak unavailable",
+    "unavailable_metrics": "Temperature, power, frequency and GPU utilization are null; no privileged collector used",
+    "timing": "GPU synchronized at stage boundaries; PNG recorded separately; first run includes kernel warmup"
+  }
+}
